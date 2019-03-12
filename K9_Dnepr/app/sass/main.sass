@@ -247,6 +247,28 @@ body
       padding-bottom: 4%
       justify-content: center
       background-color: rgba(255,255,255, .75)
+      &__location
+        position: absolute
+        width: 300px
+        right: -180%
+        top: 35%
+        transform: rotate(270deg)
+        color: lighten($dark, 15%)
+        &>.location
+          font-weight: 700
+          line-height: 12px
+          font-size: .7rem
+          letter-spacing: 0.03rem
+          text-transform: uppercase
+        .fas
+          position: absolute
+          left: -25px
+          top: 2px
+          font-size: 1.45rem
+        p
+          font-family: 'Fira Sans', sans-serif
+          font-size: .65rem
+          letter-spacing: .025rem
       &__social
         display: flex
         flex-direction: column
@@ -256,17 +278,18 @@ body
           margin-top: 10px
           margin-left: 5px
         .fab
+          font-size: 0.8125rem
           color: #fff
           text-decoration: none
-          line-height: 32px
+          line-height: 28px
           text-align: center
           background-color: $dark
           border-radius: 50%
-          width: 32px
-          height: 32px
+          width: 28px
+          height: 28px
           &:hover
-            background-color: lighten($dark, 5%)
-            box-shadow: 0px 0px 15px rgba($dark, 0.75)
+            background-color: lighten($second, 5%)
+            box-shadow: 0px 0px 7px rgba($second, 0.85)
 
               
 
