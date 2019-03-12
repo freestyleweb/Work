@@ -320,35 +320,62 @@ html.mm-opened
     margin-left: 0
   body.ishome .top__nav-autorization 
     margin-right: 40px
+  body.ishome .top__line 
+    .top__line-location .h2
+      font-size: 0.53rem
+    .top__line-location p
+      font-size: 0.52rem
+    .h2
+      letter-spacing: 0.05rem
 
 @media screen and (max-width: 992px)
   body.ishome .top__line .h2
     font-size: 0.65rem
   body.ishome .top__line-phone
     font-size: 1rem
-  // body.ishome .top__nav .logo
-  //   margin-left: 20%
-  // body.ishome .top__nav-autorization 
-  //   margin-right: 40px
+  body.ishome .top__line 
+    .top__line-location .h2
+      font-size: 0.53rem
+    .top__line-location p
+      font-size: 0.52rem
+  body.ishome .top__line-location .fas
+    left: 45%
+
 
 @media screen and (max-width: 768px)
   body.ishome .top__line .h2
     font-size: 0.5rem
     letter-spacing: 0.05rem
     text-align: left
-
-
+  body.ishome .top__line-location .fas
+    left: 25%
 
 @media screen and (max-width: 576px)
-  body.ishome .top__line .h2
+  body.ishome .top__line-location .fas
+    left: 25%
+
+@media screen and (max-width: 525px)
+  body.ishome .top__line-location .fas
+    left: 23%
+    margin: auto
+
+@media screen and (max-width: 510px)
+  body.ishome .top__line .h2 .fas:last-child
     display: none
-    font-size: 0.4rem
-    text-align: center
   body.ishome .top__line-phone
-    font-size: 1rem
-    position: absolute
-    left: 0
-    width: 100%
+    font-size: .75rem
+    width: 112%
+
+@media screen and (max-width: 385px)
+  body.ishome .top__line-location
+    visibility: hidden
+
+@media screen and (max-width: 320px)
+  body.ishome .top__line-phone
+    font-size: .75rem
+  
+
+
 
 
 // @import "_media" // Always at the end
