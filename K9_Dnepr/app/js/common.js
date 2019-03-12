@@ -19,7 +19,7 @@ $(function() {
 
 	$('.carousel-main').owlCarousel({
         loop: true,
-        nav: true,
+        nav: false,
         items: 1,
         smartSpeed: 700,
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],

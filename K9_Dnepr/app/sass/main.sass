@@ -121,7 +121,7 @@ body
       height: 75px
       .logo
         line-height: 73px
-        margin-left: 20%
+        //margin-left: 20%
 
 
       &-menu li     /*:hover, li:focus, li:active*/
@@ -163,7 +163,7 @@ body
       &-autorization
         display: flex
         justify-content: flex-end
-        // margin-right: 20px
+        padding-right: 10%
         .fas
           font-size: 1.1rem
           margin-right: 10px
@@ -173,16 +173,17 @@ body
       // padding-top: 4%
       height: 100vh
       position: relative
+      bottom: 0
       .owl-nav
-        display: flex
-        position: absolute
-        bottom: 10%
-        right: 10%
-        color: #ffffff
-        font-size: 1rem          
-        i
-          padding: 0 10px
-          text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85)
+        display: none
+        // position: absolute
+        // bottom: 10%
+        // right: 10%
+        // color: #ffffff
+        // font-size: 1rem          
+        // i
+        //   padding: 0 10px
+        //   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85)
           
           
       &-item
@@ -198,12 +199,12 @@ body
         &>.offer
           position: absolute
           left: 16%
-          top: 25%
+          top: 30%
           &>.offer-title
             font-weight: 900
-            font-size: 2.25rem
+            font-size: 1.875rem
             text-transform: uppercase
-            line-height: 3.5rem
+            line-height: 3rem
             letter-spacing: 0.07rem
             margin-bottom: 1.5rem
             &>span
@@ -212,10 +213,10 @@ body
               margin-top: 0.25rem
               padding: 0 25px 0 20px
           &>.offer-description
-            font-size: 1.3rem
+            font-size: 1.125rem
             font-weight: 700
             letter-spacing: 0.01rem
-            line-height: 30px
+            line-height: 1.75rem
             text-transform: none
             text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75)
             width: 45%
@@ -223,13 +224,14 @@ body
             display: inline-block
             background-color: $accent
             color: #fff
+            font-size: 0.75rem
             text-transform: uppercase
             text-decoration: none
             font-weight: 600
             letter-spacing: 0.13rem
-            padding: 15px 45px
+            padding: 10px 40px
             border-radius: 3px
-            margin-top: 10%
+            margin-top: 7%
             // margin-bottom: 10%
             &:hover
               box-shadow: 0px 0px 25px rgba(255, 151, 0, 0.65)
@@ -316,10 +318,11 @@ html.mm-opened
   overflow-y: scroll
 
 @media screen and (max-width: 1199px)
-  .ishome .top__nav .logo
+  .top__nav .logo
     margin-left: 0
   body.ishome .top__nav-autorization 
-    margin-right: 40px
+    // margin-right: 40px
+    padding-right: 5%
   body.ishome .top__line 
     .top__line-location .h2
       font-size: 0.53rem
@@ -351,28 +354,43 @@ html.mm-opened
     left: 25%
 
 @media screen and (max-width: 576px)
-  body.ishome .top__line-location .fas
-    left: 25%
+  body.ishome 
+    .top__line-location .fas
+      left: 25%
+    .top__nav-autorization
+      padding-right: 10%  
 
 @media screen and (max-width: 525px)
-  body.ishome .top__line-location .fas
-    left: 23%
-    margin: auto
+  body.ishome 
+    .top__line-location .fas
+      left: 23%
+      margin: auto
+    .top__nav-autorization
+      padding-right: 15% 
 
 @media screen and (max-width: 510px)
-  body.ishome .top__line .h2 .fas:last-child
-    display: none
-  body.ishome .top__line-phone
-    font-size: .75rem
-    width: 112%
+  body.ishome 
+    .top__line .h2 .fas:last-child
+      display: none
+    .top__line-phone
+      font-size: .75rem
+      width: 112%
+    .top__nav-autorization
+      display: none
 
 @media screen and (max-width: 385px)
   body.ishome .top__line-location
     visibility: hidden
+  body.ishome .top__line-phone
+    width: 300%
+    margin-left: -187%
 
 @media screen and (max-width: 320px)
   body.ishome .top__line-phone
     font-size: .75rem
+  body.ishome .top__line-phone
+    width: 320%
+    margin-left: -195%
   
 
 
