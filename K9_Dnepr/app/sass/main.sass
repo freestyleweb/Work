@@ -1,0 +1,354 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: $accent
+  color: #fff
+*
+  transition: all 0.2s ease
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
+  color: $text
+  input, textarea
+    border: #666 1px solid
+    outline: none
+    &:focus:required:invalid
+      border-color: red
+    &:required:valid
+      border-color: green
+  ul, li
+    display: inline-block
+    margin: 0
+    padding: 0
+
+
+
+  .img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+    &.img-width
+      width: 100%
+
+  .text-center
+    text-align: center
+
+  b, strong
+    font-weight: bold
+
+
+  section, header
+    position: relative
+    background-size: cover
+    background-position: center
+
+  &.ishome
+    .site-header
+      min-height: 700px
+      height: 100vh
+      background-color: #E3DABB
+    .top__line
+      position: fixed
+      z-index: 5
+      width: 100%
+      height: 2.5rem
+      background-color: $accent
+      &-offer
+        width: 100%
+      .h1, .h2
+        font-family: 'Fira Sans', sans-serif
+        color: #fff
+        text-transform: uppercase
+        font-size: 0.75rem
+        font-weight: 700
+        letter-spacing: 0.1rem
+        line-height: 40px
+        margin-bottom: 0
+        text-align: right
+        .fas
+          margin: 0 7px
+          &:last-child
+            margin-right: 0
+      .top__line-location
+        .h2
+          font-weight: 700
+          line-height: 12px
+          text-align: right
+          font-size: 0.67rem
+          letter-spacing: 0.06rem
+      &-location
+        margin-right: 8px
+        text-align: right
+        margin-top: 7px
+        .fas
+          position: absolute
+          left: 12px
+          font-size: 1.3rem
+        p
+          font-family: 'Fira Sans', sans-serif
+          color: #fff
+          font-size: .65rem
+          letter-spacing: .02rem
+      &-phone
+        //width: 94%
+        font-family: 'Fira Sans', sans-serif
+        color: #fff
+        font-weight: 800
+        text-align: center
+        line-height: 40px
+        background-color: $red
+        cursor: pointer
+        letter-spacing: 0.03rem
+
+    .top__nav
+      position: fixed
+      z-index: 2
+      left: 0
+      top: 40px
+      width: 100%
+      background-color: #fff
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25)
+      height: 75px
+      .logo
+        line-height: 73px
+        margin-left: 20%
+
+
+      &-menu li     /*:hover, li:focus, li:active*/
+        display: inline-block
+        cursor: pointer
+        position: relative
+        &:hover a, &:focus a, &:hover a
+          color: $second
+
+        // &::after
+        //   background-color: $accent
+        //   display: block
+        //   content: ''
+        //   height: 2px
+        //   width: 0%
+        //   left: 50%
+        //   position: absolute
+        //   transform: translateX(-50%)
+      &-menu li, &-autorization li
+        margin: 0 7px
+        &-menu li:hover, li:focus, li:active
+          a
+            color: $second
+        a
+          color: $dark
+          text-transform: uppercase
+          text-decoration: none
+          line-height: 75px
+          font-size: 0.75rem
+          font-weight: 400
+          &:hover, &:focus, &:active
+            color: $second
+          
+      &-autorization li:hover, li:focus, li:active
+        cursor: pointer
+        a
+          color: $second
+
+      &-autorization
+        display: flex
+        justify-content: flex-end
+        // margin-right: 20px
+        .fas
+          font-size: 1.1rem
+          margin-right: 10px
+          margin-left: 10px
+
+    .carousel-main
+      // padding-top: 4%
+      height: 100vh
+      position: relative
+      .owl-nav
+        display: flex
+        position: absolute
+        bottom: 10%
+        right: 10%
+        color: #ffffff
+        font-size: 1rem          
+        i
+          padding: 0 10px
+          text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85)
+          
+          
+      &-item
+        position: relative
+        font-family: "Fira Sans", serif
+        color: #fff
+        &>.img-item
+          //background-image: url('../img/slider-bg-1.jpg')
+          background-size: cover
+          background-repeat: no-repeat
+          background-position: center
+          height: 100vh
+        &>.offer
+          position: absolute
+          left: 16%
+          top: 25%
+          &>.offer-title
+            font-weight: 900
+            font-size: 2.25rem
+            text-transform: uppercase
+            line-height: 3.5rem
+            letter-spacing: 0.07rem
+            margin-bottom: 1.5rem
+            &>span
+              display: inline-block
+              background-color: $second
+              margin-top: 0.25rem
+              padding: 0 25px 0 20px
+          &>.offer-description
+            font-size: 1.3rem
+            font-weight: 700
+            letter-spacing: 0.01rem
+            line-height: 30px
+            text-transform: none
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.75)
+            width: 45%
+          &>.btn
+            display: inline-block
+            background-color: $accent
+            color: #fff
+            text-transform: uppercase
+            text-decoration: none
+            font-weight: 600
+            letter-spacing: 0.13rem
+            padding: 15px 45px
+            border-radius: 3px
+            margin-top: 10%
+            // margin-bottom: 10%
+            &:hover
+              box-shadow: 0px 0px 25px rgba(255, 151, 0, 0.65)
+
+    .side-bar
+      position: absolute
+      top: 0
+      right: 0
+      z-index: 2
+      display: flex
+      width: 70px
+      height: 100vh
+      padding-bottom: 4%
+      justify-content: center
+      background-color: rgba(255,255,255, .75)
+      &__social
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        &-icon
+          margin-top: 10px
+          margin-left: 5px
+        .fab
+          color: #fff
+          text-decoration: none
+          line-height: 32px
+          text-align: center
+          background-color: $dark
+          border-radius: 50%
+          width: 32px
+          height: 32px
+          &:hover
+            background-color: lighten($dark, 5%)
+            box-shadow: 0px 0px 15px rgba($dark, 0.75)
+
+              
+
+
+
+.hamburger
+  position: absolute
+  z-index: 2
+  right: 0
+  top: .75rem
+  &-box
+    width: 35px
+  .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+    width: 28px
+    height: 1.75px
+    background-color: $dark
+  .hamburger-inner::before
+    top: -8px
+  .hamburger-inner::after
+    top: 8px
+
+.mm-menu.mm-effect-menu-slide
+  position: absolute
+  z-index: 99
+
+.mm-navbar
+  background: $accent
+  height: 40px
+.mm-title
+  margin-top: 14%
+.mm-listview
+    padding-top: 22%
+.mm-listitem a
+    &:hover
+      color: $second
+      // transition: color .2s ease
+.mm-panels > .mm-panel.mm-hasnavbar
+  right: -18px
+.mm-listview > li:not(.mm-divider)::after
+  display: none
+.mm-listview > li a
+  &:hover
+    color: $second
+    // transition: all .25s ease
+.mm-menu.mm-theme-white .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-white .mm-listview > li.mm-selected > span:hover
+  color: $second
+
+html.mm-opened
+  overflow-y: scroll
+
+@media screen and (max-width: 1199px)
+  .ishome .top__nav .logo
+    margin-left: 0
+  body.ishome .top__nav-autorization 
+    margin-right: 40px
+
+@media screen and (max-width: 992px)
+  body.ishome .top__line .h2
+    font-size: 0.65rem
+  body.ishome .top__line-phone
+    font-size: 1rem
+  // body.ishome .top__nav .logo
+  //   margin-left: 20%
+  // body.ishome .top__nav-autorization 
+  //   margin-right: 40px
+
+@media screen and (max-width: 768px)
+  body.ishome .top__line .h2
+    font-size: 0.5rem
+    letter-spacing: 0.05rem
+    text-align: left
+
+
+
+@media screen and (max-width: 576px)
+  body.ishome .top__line .h2
+    display: none
+    font-size: 0.4rem
+    text-align: center
+  body.ishome .top__line-phone
+    font-size: 1rem
+    position: absolute
+    left: 0
+    width: 100%
+
+
+// @import "_media" // Always at the end
