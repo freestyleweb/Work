@@ -114,8 +114,7 @@ body
 
   &.ishome
     .site-header
-      min-height: 700px
-      height: 100vh
+      max-height: 100vh
       background-color: #E3DABB
     .top__line
       position: fixed
@@ -269,9 +268,11 @@ body
     
 
     .side-bar
-      position: absolute
+      position: fixed
       top: 0
       right: 0
+      left: 0
+      bottom: 0
       z-index: 2
       display: flex
       width: 70px
@@ -348,7 +349,7 @@ body
     top: 8px
 
 .mm-menu.mm-effect-menu-slide
-  position: absolute
+  position: fixed
   z-index: 99
 
 .mm-navbar
