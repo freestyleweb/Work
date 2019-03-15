@@ -9,6 +9,15 @@
   background-color: $dark
   color: #fff
 
+.h5
+  text-transform: uppercase
+  font-size: 0.875rem
+  font-weight: 600
+  line-height: 1.5rem
+  letter-spacing: .5px
+  color: #ffffff
+  opacity: 1
+
 .a18622da_e04c_41fc_b6ea_82a9b5417c40_6bd79e10_5bb8_4d3b_a208_ccc01b469bf4root
   margin-right: 10%
 
@@ -181,6 +190,8 @@ body
       height: 75px
       .logo
         line-height: 73px
+        img
+          width: 100px
 
 
       &-menu
@@ -511,15 +522,174 @@ html.mm-opened
   background-repeat: no-repeat
   background-size: contain
 
+/* Отзывы */
+.reviews
+  background-color: #F9F8F6
+  .carousel-reviews
+    max-width: auto
+    &-item
+      text-align: center
+      max-width: 745px
+      margin: auto
+      &:before
+        content: ''
+        font-family: "Fontawesome", serif
+        font-weight: 800
+        font-size: 2.25rem
+    .reviews-text
+
+    .reviews-foto
+      width: auto
+      margin: auto
+
+/* Карта */
+.map
+  height: 500px
+
   /* Footer */
 .footer
-  padding: 211px 0
+  padding: 65px 0
   background-color: #ffffff
   background-size: cover
   background-repeat: no-repeat
   background-color: #412814
   background-blend-mode: luminosity
   background-position: center top
+  color: #FEFEFD
+  &-logo
+      img
+        width: 100px
+  &-nav
+    display: flex
+    justify-content: space-between
+  &-menu
+    display: flex
+    flex-direction: column
+    &-item
+      font-size: .75rem
+      line-height: 1.5rem
+      color: #fff
+      opacity: .7
+      letter-spacing: .5px
+      &:hover
+        text-decoration: none
+        color: #ffffff
+        opacity: 1
+    .h5
+      margin: 0
+      padding: 0
+      &:hover
+        color: #ffffff
+        opacity: .75
+        text-decoration: none 
+  .footer-nav-contacts, .footer-menu-contacts
+    justify-content: flex-end
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0  
+
+  .footer
+    &-menu
+      &-contacts
+        position: relative
+        #item-icons
+          position: absolute
+          font-size: 1.5rem
+          left: -30px
+          top: 7px
+
+        span
+          text-transform: uppercase
+          font-weight: 600
+          letter-spacing: .06rem
+    &-phone
+      margin-bottom: 0
+      a
+        color: #ffffff
+        font-weight: 800
+        font-size: 0.85rem
+    &-social-icon
+      display: inline-block
+      margin: 10px 10px 0 0
+      .fab
+        font-size: 0.8125rem
+        font-weight: 600
+        color: #fff
+        text-decoration: none
+        line-height: 30px
+        text-align: center
+        background-color: transparent
+        border: 2px solid #fff
+        border-radius: 50%
+        width: 32px
+        height: 32px
+        &:hover
+          color: #412814
+          background-color: #fff
+          >.animated
+            animation-duration: .1s
+            animation-delay: .1s
+    &-form
+      border-bottom: 2px solid #fff
+      input
+        width: 85%
+        background-color: transparent
+        border: none
+      button
+        background-color: transparent
+        border: none
+        color: #ffffff
+        font-size: 1.25rem
+        cursor: pointer
+        margin-bottom: 15px
+  .copyright
+    font-size: .75rem
+    margin-top: -40px
+    p
+      margin-bottom: 5px
+    .free
+      font-size: 0.85rem
+      letter-spacing: .25px
+      opacity: .75
+      >a
+        color: #ffffff
+        // text-decoration: underline
+        font-size: 0.85rem
+        letter-spacing: .25px
+        opacity: .75
+        
+          
+
+
+
+
+
+
+
+
+
+
+        //   &-item
+        //   font-size: .75rem
+        //   line-height: 1.5rem
+        //   color: #fff
+        //   opacity: .7
+        //   letter-spacing: .5px
+        //   &:hover
+        //     color: #ffffff
+        //     opacity: 1
+        // span
+        //   text-transform: uppercase
+        //   font-weight: 600
+        //   letter-spacing: .06rem
+        // a
+        //   color: #fff
+        //   opacity: 1
+        //   font-weight: 600
+        //   text-decoration: underline
+  
+      
+        
 
 
       

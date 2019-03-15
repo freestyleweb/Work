@@ -132,7 +132,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-xl-2 col-3">
-								<a href="#" class="logo"><img src="img/Logo.svg" alt="К9 Днепр"></a>
+								<a href="#" class="logo"><img src="img/logo.png" alt="К9 Днепр"></a>
 							</div>
 							<div class="col-xl-6 col-lg-6 d-none d-xl-block">
 								<ul class="top__nav-menu">
@@ -317,6 +317,31 @@
 				</div>
 			</section>
 
+			<section class="reviews">
+				<div class="owl-carousel carousel-reviews">								
+
+					<div class="container">
+						<div class="row">
+							<div class="offset-md-1 col-md-10">
+								<div class="carousel-reviews-item">
+									<p class="reviews-text">
+										Спасибо за отпуск нашего Джека у Вас) мне кажется он так напугался, 
+										что его забрали от мамы, что стал ценить дом и нас больше)))
+										стал вести себя лучше) надеемся доехать к Вам на занятия)) Рекомендую 🐕
+									</p>
+									<img src="img/foto-1.png" alt="Фото" class="reviews-foto">
+								</div>
+							</div>
+						</div>
+					</div>					
+
+				</div>
+			</section>
+
+			<section class="map" id="map">
+
+			</section>
+
 		</div>
 
 
@@ -324,7 +349,74 @@
 			<footer class="footer" style="background-image: url('img/footer-bg.jpg')">
 				<div class="container">
 					<div class="row">
-
+						<div class="col-md-2">
+							<a href="#" class="footer-logo"><img src="img/logo_footer.png" alt=""></a>
+						</div>
+						<div class="col-md-6">
+							<div class="footer-nav">
+								<ul class="footer-menu">
+									<li><a href="#" class="h5">Школа</li>
+									<li><a href="#" class="footer-menu-item">Общий курс дрессировки</a></li>
+									<li><a href="#" class="footer-menu-item">Защитно-караульная служба</a></li>
+									<li><a href="#" class="footer-menu-item">Трюковая дрессировка</a></li>
+									<li><a href="#" class="footer-menu-item">Курс онлайн-дрессировки</a></li>
+									<li><a href="#" class="footer-menu-item">Бесконфликтная методика</a></li>
+									<li><a href="#" class="footer-menu-item">Пресса о нас</a></li>
+								</ul>
+								<ul class="footer-menu">
+									<li><a href="#" class="h5">Догхостел</a></li>
+									<li><a href="#" class="footer-menu-item">Гостиница для собак</a></li>
+									<li><a href="#" class="footer-menu-item">Дневная школа</a></li>
+									<li><a href="#" class="footer-menu-item">Документация</a></li>
+								</ul>
+								<ul class="footer-menu">
+									<li><a href="#" class="h5">Магазин</a></li>
+									<li><a href="#" class="footer-menu-item">Товары для собак</a></li>
+									<li><a href="#" class="footer-menu-item">Корма</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="footer-nav footer-nav-contacts">
+								<ul class="footer-menu">
+									<li><a href="#" class="h5">Контакты</a></li>
+									<li class="footer-menu-item footer-menu-contacts">
+										<i id="item-icons" class="fas fa-map-marker-alt"></i>
+										<span>Кинологическая служба "К9 Днепр"</span><br>
+										г. Днепр, пр. Богдана Хмельницкого, 167-Д
+									</li>
+									<li class="footer-menu-item footer-menu-contacts">
+										<i id="item-icons" class="fas fa-mobile-alt"></i>
+										<h5 class="h5">Звоните нам:</h5>
+										<p class="footer-phone">Михаил: <a href="tel:+380508000288">+38 (050) 8000-288</a><br>Светлана: <a href="tel:+380638000288">+38 (063) 8000-288</a></p>
+									</li>
+									<li class="footer-menu-item footer-menu-contacts">
+										<i id="item-icons" class="fas fa-comment"></i>
+										<h5 class="h5">Присоединяйтесь к нам в соцсетях:</h5>
+										<a href="#" class="animated footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="animated footer-social-icon"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="animated footer-social-icon"><i class="fab fa-youtube"></i></a>
+									</li>
+									<li class="footer-menu-item footer-menu-contacts">
+										<h5 class="h5">Рассылка</h5>
+										<form action="#" class="footer-form">
+											<input class="email" type="email" name="emailaddress" placeholder="Введите Ваш E-mail">
+											<button class="btn-send" type="submit"><i class="fas fa-paper-plane"></i></button>
+										</form>
+									</li>
+								</ul>
+								
+							</div>
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="copyright">
+								<p>Кинологическая служба "К9 Днепр" © 2019</p>
+								<p class="free">Студия <a href="https://freestyleweb.github.io" target="blank" > "Freestyle"</a></p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
@@ -332,7 +424,10 @@
 
 	</div>
 
+	
+
 	<!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=397"></script> -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 	<script type="text/javascript" src="https://spikmi.com/Widget?Id=397"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/scripts.min.js"></script>
