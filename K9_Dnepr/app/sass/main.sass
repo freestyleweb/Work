@@ -49,10 +49,13 @@
 *
   transition: all 0.2s ease
   box-sizing: border-box
+
+.w-100
+  width: 100%
   
 
 section
-  padding: 105px 0
+  padding: 90px 0
 
 .section-title
   font-family: 'Fira Sans', sans-serif
@@ -154,14 +157,14 @@ body
           text-align: right
           font-size: 0.67rem
           letter-spacing: 0.06rem
-      &-location
-        margin-right: 8px
-        text-align: right
-        margin-top: 7px
-        .fas
-          position: absolute
-          left: 12px
-          font-size: 1.3rem
+      // &-location
+      //   margin-right: 8px
+      //   text-align: right
+      //   margin-top: 7px
+        // .fas
+        //   position: absolute
+        //   left: 12px
+        //   font-size: 1.3rem
         p
           font-family: 'Fira Sans', sans-serif
           color: #fff
@@ -279,10 +282,10 @@ body
     
 
     .side-bar
-      position: fixed
+      position: absolute
       top: 0
       right: 0
-      left: 0
+      // left: 0
       bottom: 0
       z-index: 2
       display: flex
@@ -318,7 +321,7 @@ body
         flex-direction: column
         justify-content: flex-start
         align-items: center
-        margin-top: 10rem
+        margin-top: 9rem
         &-icon
           margin-top: 10px
           margin-left: 5px
@@ -358,6 +361,8 @@ body
     top: -8px
   .hamburger-inner::after
     top: 8px
+  .hamburger .hamburger--emphatic .is-active
+    position: fixed
 
 .mm-menu.mm-effect-menu-slide
   position: fixed
@@ -367,9 +372,12 @@ body
   background: $accent
   height: 40px
 .mm-title
-  margin-top: 14%
+  margin-top: 50px
 .mm-listview
-    padding-top: 22%
+  padding-top: 90px
+  padding-left: 20px
+.m-autorization
+  display: none
 .mm-listitem a
     &:hover
       color: $second
@@ -382,6 +390,8 @@ body
     color: $second
 .mm-menu.mm-theme-white .mm-listview > li.mm-selected > a:not(.mm-next), .mm-menu.mm-theme-white .mm-listview > li.mm-selected > span:hover
   color: $second
+.fas
+  margin-right: 10px
 
 html.mm-opened
   overflow-y: scroll
@@ -396,14 +406,14 @@ html.mm-opened
   .study-image
     position: absolute
     z-index: 1
-    left: 15%
+    left: 2%
     bottom: -5%
-    width: 28%
+    width: 40%
     height: 100%
     background-repeat: no-repeat
     background-size: contain
   .section-offer
-    width: 550px  
+    width: 100% 
   .section-desc
     color: $dark
     line-height: 1.875rem
@@ -417,9 +427,10 @@ html.mm-opened
   background-color: #fcfbfa
   .section-title
     text-align: center
-.block-courses
+.courses-block
   display: flex
   flex-wrap: wrap
+  
 .courses-card
   background-color: #ffffff
   background-size: contain
@@ -427,7 +438,7 @@ html.mm-opened
   padding: 30px
   padding-top: 175px
   width: 100%
-  max-height: 500px
+  // max-height: 500px
   color: $dark
   box-shadow: 0px 0px 10px rgba(#000, 0.1)
   margin-top: 30px
@@ -441,7 +452,7 @@ html.mm-opened
 .h4
   font-family: "Fira Sans", serif
   font-weight: 400
-  font-size: 1.5rem
+  font-size: 1.2rem
   text-transform: uppercase
   line-height: 1.875rem
 .date
@@ -450,9 +461,7 @@ html.mm-opened
   font-family: "Fira Sans", serif  
   color: $second
   font-weight: bold
-  text-decoration: none 
-  span
-    font-family: "Fontawesome", serif
+  text-decoration: none
   &:hover
     color: $accent
   i
@@ -515,10 +524,10 @@ html.mm-opened
 /* Зоогостиница */
 .hostel-image
   position: absolute
-  z-index: 1
-  right: 0
-  top: -20%
-  width: 50%
+  z-index: 0
+  right: -25%
+  top: -15%
+  width: 70%
   height: 100%
   background-repeat: no-repeat
   background-size: contain
@@ -548,8 +557,9 @@ html.mm-opened
   height: 500px
 
   /* Footer */
+
 .footer
-  padding: 65px 0
+  padding: 65px 0 30px
   background-color: #ffffff
   background-size: cover
   background-repeat: no-repeat
@@ -583,8 +593,11 @@ html.mm-opened
         color: #ffffff
         opacity: .75
         text-decoration: none 
-  .footer-nav-contacts, .footer-menu-contacts
+  .footer-nav-contacts
+    display: flex
     justify-content: flex-end
+    
+  .footer-menu-contacts
     margin-bottom: 30px
     &:last-child
       margin-bottom: 0  
@@ -595,9 +608,10 @@ html.mm-opened
         position: relative
         #item-icons
           position: absolute
-          font-size: 1.5rem
-          left: -30px
+          font-size: 1.25rem
+          right: 305px
           top: 7px
+          text-align: right
 
         span
           text-transform: uppercase
@@ -617,7 +631,7 @@ html.mm-opened
         font-weight: 600
         color: #fff
         text-decoration: none
-        line-height: 30px
+        line-height: 28px
         text-align: center
         background-color: transparent
         border: 2px solid #fff
@@ -631,11 +645,12 @@ html.mm-opened
             animation-duration: .1s
             animation-delay: .1s
     &-form
-      border-bottom: 2px solid #fff
+      border-bottom: 1px solid #fff
       input
-        width: 85%
+        width: 87%
         background-color: transparent
         border: none
+        color: #ffffff
       button
         background-color: transparent
         border: none
@@ -643,57 +658,24 @@ html.mm-opened
         font-size: 1.25rem
         cursor: pointer
         margin-bottom: 15px
+  .form
+    margin-top: -70px
   .copyright
-    font-size: .75rem
-    margin-top: -40px
+    font-size: .7rem
+    margin: 50px 0 0 25px
+    text-align: center
     p
-      margin-bottom: 5px
+      margin-bottom: 2px
     .free
-      font-size: 0.85rem
+      font-size: 0.7rem
       letter-spacing: .25px
       opacity: .75
       >a
         color: #ffffff
-        // text-decoration: underline
-        font-size: 0.85rem
+        font-size: 0.7rem
         letter-spacing: .25px
         opacity: .75
-        
-          
-
-
-
-
-
-
-
-
-
-
-        //   &-item
-        //   font-size: .75rem
-        //   line-height: 1.5rem
-        //   color: #fff
-        //   opacity: .7
-        //   letter-spacing: .5px
-        //   &:hover
-        //     color: #ffffff
-        //     opacity: 1
-        // span
-        //   text-transform: uppercase
-        //   font-weight: 600
-        //   letter-spacing: .06rem
-        // a
-        //   color: #fff
-        //   opacity: 1
-        //   font-weight: 600
-        //   text-decoration: underline
-  
-      
-        
-
-
-      
+    
 
 
 
@@ -710,67 +692,170 @@ html.mm-opened
       font-size: 0.52rem
     .h2
       letter-spacing: 0.05rem
+  #item-icons
+    display: none 
 
 @media screen and (max-width: 992px)
-  body.ishome .top__line .h2
-    font-size: 0.65rem
-  body.ishome .top__line-phone
-    font-size: 1rem
-  body.ishome .top__line 
-    .top__line-location .h2
-      font-size: 0.53rem
-    .top__line-location p
-      font-size: 0.52rem
-  body.ishome .top__line-location .fas
-    left: 45%
+  section
+    padding: 60px 0
+  body.ishome 
+    .h4
+      margin-top: 20% 
+    .hostel-image
+      right: -13%
+      top: 0
+      width: 60%
+    .top__line .h2
+      font-size: 0.65rem
+    .top__line-phone
+      font-size: 1rem
+    .carousel-main-item
+      >.offer
+        >.offer-title
+          font-size: 1.5rem
+        >.offer-description
+          font-size: 1rem
+          width: 55%
+    .side-bar
+      display: none  
+  body.ishome 
+    .top__nav-menu, .top__nav-autorization
+      li
+        margin: 0 4px
+        a
+          font-size: 0.65rem
+          .fas
+            font-size: 0.95rem
+    .top__nav-autorization
+      li
+        margin: 0
+        
+    .study-image
+      left: 3%
+      bottom: -10%
+      width: 33%
+    .section-title
+      font-size: 1.7rem
+    .section-desc
+      font-size: 0.9375rem
+      line-height: 1.75rem
+  
 
 
 @media screen and (max-width: 768px)
-  body.ishome .top__line .h2
-    font-size: 0.5rem
-    letter-spacing: 0.05rem
-    text-align: left
-  body.ishome .top__line-location .fas
-    left: 25%
+  body.ishome
+    .footer-nav
+      display: none
+    .footer-nav-contacts
+      text-align: center
+    .form
+      margin: 20px 0 auto
+    .study-image, .hostel-image
+      display: none
+    .section-desc
+      font-size: 0.875rem
+      line-height: 1.75rem
+    .btn
+      font-size: 0.75rem
+      padding: 12px 30px
+    .h4
+      margin-top: 5% 
+    .top__nav-autorization
+      display: none
+    .top__line 
+      .h2        
+        font-size: 0.5rem
+        letter-spacing: 0.05rem
+        text-align: right
+        .fas
+          margin: 0 4px
+  body.ishome .top__line-phone
+    font-size: .75rem
+  .m-autorization
+    display: block
+    padding: 0
+    margin-top: 10px
+    .fas
+      margin-right: 10px
+     
 
 @media screen and (max-width: 576px)
-  body.ishome 
-    .top__line-location .fas
-      left: 25%
-    .top__nav-autorization
-      padding-right: 10%  
+  body.ishome
+    .footer-form input
+      width: 82%
+    section
+      padding: 35px 0 
+    .courses-card
+      padding: 30px
+      padding-top: 65%
+    .top__line
+      background-color: #f50000 
+      &-offer        
+        display: none
+    .top__line-phone
+      width: 100%
+      line-height: 39px
+      margin: auto
+    .top__nav-menu
+      display: none
+    .carousel-main-item
+      &>.offer
+        &-title
+        &>.h1
+          font-size: 1rem
+          line-height: 2.5rem
+        &>.offer-description
+          font-size: 0.85rem
+          width: 65%  
 
 @media screen and (max-width: 525px)
   body.ishome 
     .top__line-location .fas
       left: 23%
       margin: auto
-    .top__nav-autorization
-      padding-right: 15% 
+    .carousel-main-item
+      &>.offer
+        top: 30%
+        left: 15px
+        width: 91%
+        margin: 0 auto
+        >.btn
+          width: 70%
+          text-align: center
+          margin-top: 9.5rem
+          font-size: 0.75rem
+        &-title
+          margin-bottom: 1rem
+        &>.offer-title
+          font-size: .85rem
+          line-height: 2.5rem
+          letter-spacing: .03rem
+          text-align: center
+        &>.offer-description
+          display: none
 
 @media screen and (max-width: 510px)
   body.ishome 
-    .top__line .h2 .fas:last-child
+    .section-title
+      font-size: 1.5rem
+    .top__line .h2
       display: none
     .top__line-phone
       font-size: .75rem
-      width: 112%
+      width: 100%
     .top__nav-autorization
       display: none
 
 @media screen and (max-width: 385px)
   body.ishome .top__line-location
     visibility: hidden
-  body.ishome .top__line-phone
-    width: 300%
-    margin-left: -187%
 
 @media screen and (max-width: 320px)
   body.ishome .top__line-phone
     font-size: .75rem
-  body.ishome .top__line-phone
-    width: 320%
-    margin-left: -195%
+  .btn
+    width: 100%
+    text-align: center
 
 
 // @import "_media" // Always at the end

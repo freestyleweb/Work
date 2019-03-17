@@ -1,7 +1,7 @@
 $(function() {
 
 	$('#my-menu').mmenu({
-        extensions: [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black'],
+        extensions: [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black', ],
         navbar: {
             title: '<img src="../img/Logo.svg" alt="К9 Днепр">'
         },
