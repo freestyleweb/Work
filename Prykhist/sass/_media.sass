@@ -1,27 +1,32 @@
 /* // Medium devices (tablets, less than 992px) */
 
 @media screen and (max-width: 992px) 
-	.main-menu__item a 
-		font-size: 12px	
 	.card__news
-		&_text
-			margin-top: -8em
-		&_header
-			font-size: 1.5em
 		&_description
-			margin-top: 0.5em
-			padding: 25px
+			font-size: 1em
+		&_offer
+			width: 100%
+		&-warn
+			margin-bottom: 30px
+	// .big__news_title
+	// 	font-size: 1.1em
 
-@media screen and (max-width: 768px) 	
-	.header 
-		max-height: 50px
-		
+@media screen and (max-width: 768px)
+	.header
+		position: fixed
+		min-height: 50px 	
+	
 	.header__logo 
 		padding: 14px 0
-		max-height: 50px
+		min-height: 50px
+		position: relative
+		z-index: 99
 	
 	.header__logo img 
 		max-width: 115px
+
+	.home__section 
+		padding: 50px 0 50px 0
 	
 	.main-menu 
 		display: none	
@@ -43,92 +48,26 @@
 	
 	.mobile-search 
 		display: flex
-
-	.rubric
-		margin-top: 0
+	.big__news_title
+			font-size: 1.5em
 
 	.card__news
-		&_text
-			margin: 0		
-		&_header
-			font-size: 1.29em
-			color: $darkBlue
-			text-shadow: none
-			margin: 15px 0
-		&_description
-			display: flex !important
-			padding-top: 0
-		&-mini
-				padding-bottom: 15px
+		margin-bottom: 30px
 
-	.card__news-warn
-		.card__news
-			&_description
-				display: flex
-				padding-top: 0
-		
+@media screen and (max-width: 576px)	
+	.big__news_title
+		margin-bottom: 15px
+		padding: 0
+		position: static
+		letter-spacing: normal
+		color: $darkBlue
+		text-shadow: none
 
-	// .card__news
-	// 	&_text
-	// 		margin-top: -6em
-	// 	&_description
-	// 		margin-top: 1em
+@media screen and (max-width: 447px)
+	
 
-	// .card__news-mini
-	// 	margin: 0		
+@media screen and (max-width: 352px)
+	
 
-	// .card__news-warn
-	// 	.card__news
-	// 		&_description
-	// 			display: flex
-	// 			padding-top: 0
-	// 		&_text
-	// 			margin-top: 0
-	// 		&_header
-	// 			color: $darkBlue
-	// 			text-shadow: none
-	// 			margin: 25px 0
-
-	@media screen and (max-width: 767px)
-
-	// .rubric
-	// 	margin-top: 0
-	.card__news
-		// &_text
-		// 	margin: 0		
-		// &_header
-		// 	font-size: 1.29em
-		// 	color: $darkBlue
-		// 	text-shadow: none
-		// 	margin: 15px 0
-		&_description
-			display: none
-	// .card__news-warn
-	// 	.card__news
-	// 		&_description
-	// 			display: flex
-	// 			padding-top: 0
-
-
-	// .card__news
-	// 	&_header
-	// 		font-size: 1.5em
-
-@media screen and (max-width: 576px)
-	// .rubric
-	// 	margin-top: 0
-	// .card__news
-	// 	&_text
-	// 		margin: 0		
-	// 	&_header
-	// 		font-size: 1.29em
-	// 		color: $darkBlue
-	// 		text-shadow: none
-	// 		margin: 15px 0
-	// 	&_description
-	// 		display: none
-	// .card__news-warn
-	// 	.card__news
-	// 		&_description
-	// 			display: flex
-	// 			padding-top: 0
+@media screen and (max-width: 320px)
+	

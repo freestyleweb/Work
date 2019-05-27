@@ -111,7 +111,7 @@ body
 	flex-direction: column
 	align-items: center
 	width: 100%
-	background-color: #B3E7E8
+	background-color: rgba(48, 77, 99, 0.95)
 	margin: 0
 	padding: 0
 	padding-top: 60px
@@ -315,8 +315,7 @@ nav
 /* ==================== HOME SECTION ====================*/
 
 .home__section 
-	padding: 25px 0 50px 0
-
+	padding: 0 0 50px 0
 
 .rubric 
 	display: flex
@@ -324,7 +323,7 @@ nav
 	justify-content: center
 	background-color: $darkBlue
 	height: 30px
-	margin: 25px 0
+	margin: 30px 0 25px 0
 	&__link
 		display: flex
 		color: $white
@@ -335,72 +334,133 @@ nav
 		&-warn
 			background-color: $warning
 
-.card__news
-	margin: 0 0 30px 0
+.block__news
 	display: flex
-	flex-direction: column
-	justify-content: flex-end
-	align-items: flex-end
-	text-decoration: none
-	background-color: $white
-	background-repeat: no-repeat
-	background-position: center top
 	width: 100%
+
+.card__news
+	display: flex
+	// flex-direction: column
+	flex-wrap: wrap
+	background-color: #fff
+	text-decoration: none
+	margin-bottom: 30px
 	border-bottom: 3px solid rgba(48, 77, 99, 0.5)	
-	&:hover
+	&:hover, &:focus, &:active
 		border-bottom: 3px solid $darkBlue
 		transition: all .3s ease
-	&_text
-		margin-top: -6em
-	&_header
-		display: flex
-		margin: 0
-		padding: 0 25px
-		font-size: 1.5em
-		font-weight: 700
-		line-height: 1.5em
-		color: $white
-		text-shadow: 0px 2px 4px #000000
-	&_description
-		display: flex
-		margin: 0
-		padding: 25px
-		margin-top: 1em
-		font-size: 1.15em
-		line-height: 1.58em
-		color: $darkBlue
-	img
+	&_image
 		width: 100%
-.card__news-warn
-	margin: 0 0 30px 0
-	padding: 0
-	border-bottom: 3px solid rgba(254, 91, 91, 0.5)
-	&:hover
-		border-bottom: 3px solid $warning
-	.card__news_text
-			margin: 0
-			padding: 0
-		&_header
-			margin-top: 25px
-			color: $darkBlue
-			text-shadow: none
-			font-weight: 900
-		&_description
-			margin: 0
-
-.card__news-mini
-	margin: 0 0 30px 0
-	width: 100%
-	.card__news_header
-		color: $darkBlue
-		font-size: 1.35em
-		margin: 0
+		height: auto
+	&_offer
 		padding: 25px
-		text-shadow: none
+		position: relative
+	&_title
+		font-family: Roboto
 		font-weight: 900
-	.card__news_description
+		font-size: 22px
+		line-height: 30px
+		color: $darkBlue
+		text-decoration: none
+		margin-top: 0
+	&_description
 		margin: 0
-		padding: 0 25px 0 25px
+		padding: 0
+		font-size: 1.15em
+		line-height: 1.72em
+		color: $darkBlue
+		margin: 0
+	&-warn
+		border-bottom: 3px solid rgba(254, 91, 91, 0.5)	
+		&:hover, &:focus, &:active
+			border-bottom: 3px solid $warning
+			transition: all .3s ease
+		
+
+
+.big__news_title
+	margin: 0
+	padding: 0
+	position: absolute
+	left: 25px
+	right: 25px
+	top: -70px
+	font-family: Roboto
+	font-weight: 900
+	font-size: 1.58em
+	letter-spacing: .05em
+	line-height: 26px
+	color: #FFFFFF
+	text-shadow: 0px 2px 4px #000000
+
+// .card__news
+// 	margin: 0 0 30px 0
+// 	display: flex
+// 	flex-direction: column
+// 	justify-content: flex-end
+// 	align-items: flex-end
+// 	text-decoration: none
+// 	background-color: $white
+// 	background-repeat: no-repeat
+// 	background-position: center top
+// 	width: 100%
+// 	border-bottom: 3px solid rgba(48, 77, 99, 0.5)	
+// 	&:hover
+// 		border-bottom: 3px solid $darkBlue
+// 		transition: all .3s ease
+// 	&_text
+// 		margin-top: -6em
+// 	&_header
+// 		display: flex
+// 		margin: 0
+// 		padding: 0 25px
+// 		font-size: 1.5em
+// 		font-weight: 700
+// 		line-height: 1.5em
+// 		color: $white
+// 		text-shadow: 0px 2px 4px #000000
+// 	&_description
+// 		display: flex
+// 		margin: 0
+// 		padding: 25px
+// 		margin-top: 1em
+// 		font-size: 1.15em
+// 		line-height: 1.58em
+// 		color: $darkBlue
+// 	img
+// 		width: 100%
+// .card-new
+// 	display: flex
+// .card__new-warn
+// 	margin: 0 0 30px 0
+// 	padding: 0
+// 	border-bottom: 3px solid rgba(254, 91, 91, 0.5)
+// 	&:hover
+// 		border-bottom: 3px solid $warning
+// 	.card__news_text
+// 			margin: 0
+// 			padding: 0
+// 	&_header
+// 		margin-top: 25px
+// 		color: $darkBlue
+// 		text-shadow: none
+// 		font-weight: 900
+// 		&_description
+// 			margin: 0
+
+// .card__new-mini
+// 	margin: 0 0 30px 0
+// 	width: 100%
+// 	.card__news_header
+// 		color: $darkBlue
+// 		font-size: 1.35em
+// 		margin: 0
+// 		padding: 25px
+// 		text-shadow: none
+// 		font-weight: 900
+// 	.card__news_description
+// 		margin: 0
+// 		padding: 0 25px 0 25px
 		
 
 /* ==================== FOOTER ====================*/
