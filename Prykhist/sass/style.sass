@@ -14,6 +14,8 @@ body
 
 
 
+
+
 /* ==================== HEADER ==================== */
 
 .header 
@@ -295,6 +297,7 @@ nav
 .mobile-search input 
 	width: 94%
 	margin-bottom: 10px
+	height: 40px
 
 .search button, .mobile-search button 
 	position: absolute
@@ -309,13 +312,15 @@ nav
 .mobile-search button 
 	right: 4%
 	bottom: 10px
-
+	line-height: 38px	
 
 
 /* ==================== HOME SECTION ====================*/
 
 .home__section 
 	padding: 0 0 50px 0
+	img
+		object-fit: cover
 
 .rubric 
 	display: flex
@@ -472,6 +477,7 @@ nav
 
 .footer__logo img 
 	max-width: 170px
+	text-decoration: none
 
 
 .footer__description 
@@ -479,6 +485,110 @@ nav
 	font-family: Roboto
 	font-size: 12px
 	line-height: 20px
+
+.footer__contacts
+	color: $white
+	margin-top: 3.5em
+	.footer__phones
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f095'
+			font-family: 'FontAwesome'
+			font-size: 16px
+			line-height: 31px
+			text-align: center
+			border: 1px solid $white
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 6px
+		&:hover:before
+			color: $darkBlue
+			background-color: $white
+			transition: all .3s ease	
+		a
+			display: block
+			color: $white
+			text-decoration: none		
+			font-weight: 500
+			font-family: Roboto
+			font-size: 14px
+			line-height: 22px
+	.footer__location
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f124'
+			font-family: 'FontAwesome'
+			font-size: 16px
+			line-height: 31px
+			text-align: center
+			border: 1px solid $white
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 6px
+		&:hover:before
+			color: $darkBlue
+			background-color: $white
+			transition: all .3s ease
+		p
+			font-size: 14px
+			line-height: 22px
+			font-weight: normal
+			font-family: Roboto
+	.footer__email
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f0e0'
+			font-family: 'FontAwesome'
+			font-size: 14px
+			line-height: 31px
+			text-align: center
+			border: 1px solid $white
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 5px
+		&:hover:before
+			color: $darkBlue
+			background-color: $white
+			transition: all .3s ease
+		a
+			position: relative
+			top: 8px
+			display: block
+			color: $white
+			text-decoration: none		
+			font-family: Roboto
+			font-size: 14px
+			line-height: 22px
+
+	.footer__social
+		justify-content: center
+		margin: 40px 0 0 0
+		.social__item
+			i
+				color: $white
+				font-size: 16px
+				line-height: 32px
+				text-align: center
+				border-radius: 50%
+				width: 32px
+				height: 32px
+				margin-right: 22px
+				&:hover
+					background-color: $white
+					color: $darkBlue
+					transition: all .3s ease
 
 
 
