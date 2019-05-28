@@ -1,20 +1,14 @@
 @import "_vars"
 @import "_fonts"
-
 	
 body 
 	background-color: #E5E5E5
 	font-family: 'Roboto', sans-serif
 	font-size: 13px	
 
-
 .center-v 
 	display: flex
 	align-items: center
-
-
-
-
 
 
 /* ==================== HEADER ==================== */
@@ -24,14 +18,12 @@ body
 	width: 100%
 	z-index: 10
 
-
 .header__logo 
 	display: flex
 	background-color: $darkBlue
 	margin: 0
 	padding: 35px 0
 	justify-content: center
-
 
 .header__logo img 
 	width: 220px
@@ -42,21 +34,17 @@ body
 .hamb__wrap 
 	display: none
 
-
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
 	background-color: $lightBlue
 	width: 25px
 	height: 3px
 	border-radius: 0
 
-
 .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before 
 	background-color: $lightBlue
 
-
 .hamburger-inner::before 
 	top: -8px
-
 
 .hamburger-inner::after 
 	bottom: -8px
@@ -346,7 +334,6 @@ nav
 
 .card__news
 	display: flex
-	// flex-direction: column
 	flex-wrap: wrap
 	background-color: #fff
 	text-decoration: none
@@ -381,8 +368,6 @@ nav
 		&:hover, &:focus, &:active
 			border-bottom: 3px solid $warning
 			transition: all .3s ease
-		
-
 
 .big__news_title
 	margin: 0
@@ -399,75 +384,6 @@ nav
 	color: #FFFFFF
 	text-shadow: 0px 2px 4px #000000
 
-// .card__news
-// 	margin: 0 0 30px 0
-// 	display: flex
-// 	flex-direction: column
-// 	justify-content: flex-end
-// 	align-items: flex-end
-// 	text-decoration: none
-// 	background-color: $white
-// 	background-repeat: no-repeat
-// 	background-position: center top
-// 	width: 100%
-// 	border-bottom: 3px solid rgba(48, 77, 99, 0.5)	
-// 	&:hover
-// 		border-bottom: 3px solid $darkBlue
-// 		transition: all .3s ease
-// 	&_text
-// 		margin-top: -6em
-// 	&_header
-// 		display: flex
-// 		margin: 0
-// 		padding: 0 25px
-// 		font-size: 1.5em
-// 		font-weight: 700
-// 		line-height: 1.5em
-// 		color: $white
-// 		text-shadow: 0px 2px 4px #000000
-// 	&_description
-// 		display: flex
-// 		margin: 0
-// 		padding: 25px
-// 		margin-top: 1em
-// 		font-size: 1.15em
-// 		line-height: 1.58em
-// 		color: $darkBlue
-// 	img
-// 		width: 100%
-// .card-new
-// 	display: flex
-// .card__new-warn
-// 	margin: 0 0 30px 0
-// 	padding: 0
-// 	border-bottom: 3px solid rgba(254, 91, 91, 0.5)
-// 	&:hover
-// 		border-bottom: 3px solid $warning
-// 	.card__news_text
-// 			margin: 0
-// 			padding: 0
-// 	&_header
-// 		margin-top: 25px
-// 		color: $darkBlue
-// 		text-shadow: none
-// 		font-weight: 900
-// 		&_description
-// 			margin: 0
-
-// .card__new-mini
-// 	margin: 0 0 30px 0
-// 	width: 100%
-// 	.card__news_header
-// 		color: $darkBlue
-// 		font-size: 1.35em
-// 		margin: 0
-// 		padding: 25px
-// 		text-shadow: none
-// 		font-weight: 900
-// 	.card__news_description
-// 		margin: 0
-// 		padding: 0 25px 0 25px
-		
 
 /* ==================== FOOTER ====================*/
 
@@ -488,6 +404,8 @@ nav
 	line-height: 20px
 
 .footer__contacts
+	display: block
+	margin-left: 15px
 	color: $white
 	margin-top: 3.5em
 	.footer__phones
@@ -516,7 +434,7 @@ nav
 			text-decoration: none		
 			font-weight: 500
 			font-family: Roboto
-			font-size: 14px
+			font-size: 13px
 			line-height: 22px
 	.footer__location
 		position: relative
@@ -539,7 +457,7 @@ nav
 			background-color: $white
 			transition: all .3s ease
 		p
-			font-size: 14px
+			font-size: 12px
 			line-height: 22px
 			font-weight: normal
 			font-family: Roboto
@@ -570,26 +488,89 @@ nav
 			color: $white
 			text-decoration: none		
 			font-family: Roboto
-			font-size: 14px
-			line-height: 22px
+			font-size: 12px
+			line-height: 22px	
 
-	.footer__social
-		justify-content: center
-		margin: 40px 0 0 0
-		.social__item
-			i
-				color: $white
-				font-size: 16px
-				line-height: 32px
-				text-align: center
-				border-radius: 50%
-				width: 32px
-				height: 32px
-				margin-right: 22px
-				&:hover
-					background-color: $white
-					color: $darkBlue
-					transition: all .3s ease
+.footer__form
+	display: flex	
+	justify-content: flex-end
+	margin-top: 45px	
+	font-size: 12px
+	&_phone, &_mail, &_message
+		display: flex
+		justify-content: flex-end
+		color: $white
+		margin-bottom: 15px
+	&_btn
+		display: flex
+		justify-content: flex-end
+		button
+			cursor: pointer
+			width: 200px
+			background-color: $darkBlue
+			font-family: 'Roboto', sans-serif
+			font-size: 11px
+			line-height: 30px
+			text-align: center
+			letter-spacing: .15em
+			color:	$white
+			text-transform: uppercase
+			font-weight: 700
+			border: 1px solid #7C93A0
+			&:hover
+				background-color: $white
+				color: $darkBlue
+				font-weight: 900
+				transition: all .3s ease
+
+	label
+		margin-right: 15px
+		text-align: right
+	input, textarea
+		min-width: 200px
+		height: 30px
+		padding: 10px 0 10px 10px
+		background-color: $darkBlue
+		border: 1px solid #7C93A0
+		color: $white
+	textarea
+		height: 105px
+
+.footer__social
+	justify-content: center
+	margin: 0 0 15px 0
+	padding: 0
+	.social__item
+		margin-right: 22px
+		&:last-child
+			margin-right: 0px
+		i
+			color: $white
+			font-size: 16px
+			line-height: 32px
+			text-align: center
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			// margin-right: 22px
+			&:hover
+				background-color: $white
+				color: $darkBlue
+				transition: all .3s ease
+
+.rights
+	color: $white
+	text-align: center
+	font-size: 0.86em
+	display: block
+	margin: 0 auto
+	padding: 0
+	text-decoration: none
+	border-bottom: 1px dotted #7C93A0
+	line-height: 20px
+	max-width: 225px
+
+	
 
 
 
