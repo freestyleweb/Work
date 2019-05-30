@@ -31,6 +31,9 @@
 	.footer__social
 		margin: 35px 0 15px 0
 
+	.other__news
+		display: none
+
 @media screen and (max-width: 768px)
 	.header
 		position: fixed
@@ -45,8 +48,11 @@
 	.header__logo img 
 		max-width: 115px
 
-	.home__section 
+	.home__section, .news__section 
 		padding: 50px 0 50px 0
+
+	.news__section 
+		padding: 50px 0 0 0
 	
 	.main-menu 
 		display: none	
@@ -77,6 +83,16 @@
 	.card__news
 		margin-bottom: 30px
 
+	.last__news
+		&_card
+			flex-direction: column
+			margin-bottom: 15px
+		&_image
+			max-width: 100%
+			margin-bottom: 15px
+		&_offer
+			padding-left: 0
+
 @media screen and (max-width: 576px)	
 	.big__news_title
 		margin-bottom: 15px
@@ -90,6 +106,12 @@
 	.rubric
 		width: 100%
 		margin: 15px 0
+
+	.last__news
+		&_card
+			
+		
+
 
 
 @media screen and (max-width: 447px)
