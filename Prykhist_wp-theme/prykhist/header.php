@@ -9,6 +9,8 @@
  * @package prykhist
  */
 
+ global $prykhist_options;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,7 +25,7 @@
 <body <?php body_class(); ?>>
 
 
-
+<?php $custom_logo = $prykhist_options['prykhist_logo']['url']; ?>
 <header class="header" id="header">
 		
 	<a class="hamb__wrap">
@@ -77,7 +79,12 @@
 	</form>
 
 	<h1 class="header__logo">
-		<a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Прихист"></a>				
+		<a href="index.html"><?php if($custom_logo){ ?>
+			<img src="<?php echo $custom_logo ?>" alt="Prykhist_Logo">
+		<?php } else {
+			echo 'No_Logo';
+		} ?>
+		</a>				
 	</h1>
 
 	<nav>

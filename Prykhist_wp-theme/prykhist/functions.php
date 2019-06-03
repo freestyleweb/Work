@@ -163,9 +163,47 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Register Post Type.
+ */
+//require get_template_directory() . '/inc/post-type.php';
+
+/**
+ * Redux Options Panel.
+ */
+require get_template_directory() . '/inc/redux-config.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+
+
+function prykhist_custompost_type_article() {
+	$labels = array(
+			'name'                  => _x( 'Статьи', 'Post type general name', 'textdomain' ),
+			'singular_name'         => _x( 'Статья', 'Post type singular name', 'textdomain' ),
+);
+
+	$args = array(
+			'labels'             => $labels,
+			'public'             => true,
+			'publicly_queryable' => true,
+			'show_ui'            => true,
+			'show_in_menu'       => true,
+			'query_var'          => true,
+			'rewrite'            => array( 'slug' => 'article' ),
+			'capability_type'    => 'post',
+			'has_archive'        => true,
+			'hierarchical'       => false,
+			'menu_position'      => null,
+			'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+	);
+
+	register_post_type( 'article', $args );
+}
+
+add_action( 'init', 'prykhist_custompost_type_article' );
 
