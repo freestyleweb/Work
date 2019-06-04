@@ -25,7 +25,7 @@
 <body <?php body_class(); ?>>
 
 
-<?php $custom_logo = $prykhist_options['prykhist_logo']['url']; ?>
+
 <header class="header" id="header">
 		
 	<a class="hamb__wrap">
@@ -78,14 +78,17 @@
 		</button>
 	</form>
 
+	<?php $custom_logo = $prykhist_options['prykhist-logo']['url']; ?>
 	<h1 class="header__logo">
-		<a href="index.html"><?php if($custom_logo){ ?>
+		<a style='text-decoration:none' href="index.html"><?php if($custom_logo){ ?>
 			<img src="<?php echo $custom_logo ?>" alt="Prykhist_Logo">
 		<?php } else {
-			echo 'No_Logo';
+			echo "<h1 style='text-transform:uppercase; color:#fff; font-weight:900;'>Прихист</h1>";
 		} ?>
 		</a>				
 	</h1>
+
+	
 
 	<nav>
 		<div class="main-menu">

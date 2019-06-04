@@ -9,20 +9,32 @@
  * @package prykhist
  */
 
+global $prykhist_options;
+
 ?>
 
 	</div><!-- #content -->
 
-
+	
 
 	<footer class="footer" id="footer">
+		
 		<div class="container">
 			<div class="row">
 
 				<div class="col-lg-4 col-md-12">
-					<a href="#" class="footer__logo">
+
+				<?php $custom_logo = $prykhist_options['prykhist-logo']['url']; ?>
+					<a style='text-decoration:none' href="index.html"><?php if($custom_logo){ ?>
+						<img style="max-width: 170px;" src="<?php echo $custom_logo ?>" alt="Prykhist_Logo">
+					<?php } else {
+						echo "<h1 style='text-transform:uppercase; color:#fff; font-weight:900;'>Прихист</h1>";
+					} ?>
+					</a>				
+
+					<!-- <a href="#" class="footer__logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Прихист">
-					</a>
+					</a> -->
 					<p class="footer__description">
 							Наша місія: Громадська організація «Прихист» стоїть 
 							на захисті прав людини. Ми були створені з метою 

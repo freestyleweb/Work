@@ -286,7 +286,7 @@
 
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Загрузка логотипа', 'redux-framework-demo' ),
-        'id'               => 'logo',
+        'id'               => 'custom-logo',
         'subsection'       => true,
         'customizer_width' => '450px',
         'desc'             => __( 'Загрузите Ваш логотип', 'redux-framework-demo' ),
@@ -299,7 +299,7 @@
                 'compiler' => 'true',
                 //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
                 'desc'     => __( 'Загрузите Ваш логотип', 'redux-framework-demo' ),
-                'subtitle' => __( 'Рекомендуемый размер: 220рх*43рх', 'redux-framework-demo' ),
+                'subtitle' => __( 'Рекомендуемый размер: 335x66 пикселей', 'redux-framework-demo' ),
                 'default'  => '',
                 //'hint'      => array(
                 //    'title'     => 'Hint Title',
