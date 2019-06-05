@@ -13,7 +13,7 @@ global $prykhist_options;
 
 ?>
 
-	</div><!-- #content -->
+	<!--/div> --><!-- #content -->
 
 	
 
@@ -25,22 +25,15 @@ global $prykhist_options;
 				<div class="col-lg-4 col-md-12">
 
 				<?php $custom_logo = $prykhist_options['prykhist-logo']['url']; ?>
-					<a style='text-decoration:none' href="index.html"><?php if($custom_logo){ ?>
-						<img style="max-width: 170px;" src="<?php echo $custom_logo ?>" alt="Prykhist_Logo">
+					<a class="footer__logo" style='text-decoration:none' href="<?php echo home_url("/"); ?>"><?php if($custom_logo){ ?>
+						<img style="max-width: 170px;" src="<?php echo esc_url($custom_logo); ?>" alt="Prykhist_Logo">
 					<?php } else {
 						echo "<h1 style='text-transform:uppercase; color:#fff; font-weight:900;'>Прихист</h1>";
 					} ?>
 					</a>				
 
-					<!-- <a href="#" class="footer__logo">
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Прихист">
-					</a> -->
 					<p class="footer__description">
-							Наша місія: Громадська організація «Прихист» стоїть 
-							на захисті прав людини. Ми були створені з метою 
-							поліпшення якості життя соціально-незахищених категорій 
-							населення, захисту їх прав, шляхом надання безкоштовної 
-							юридичної, психологічної та іншої допомоги.
+						<?php if($prykhist_options['prykhist-description']) { ?><?php echo $prykhist_options['prykhist-description']; ?><?php } ?>
 					</p>
 				</div>
 
@@ -48,19 +41,17 @@ global $prykhist_options;
 					<div class="footer__contacts">
 
 						<div class="footer__phones">
-							<a href="tel:+380990850406">+38 (099) 085 04 06</a>
-							<a href="tel:+380660579514">+38 (066) 057 95 14</a>
+							<a href="tel:<?php echo esc_attr($prykhist_options['prykhist-phone-one']); ?>"><?php if($prykhist_options['prykhist-phone-one']) { ?><?php echo esc_attr($prykhist_options['prykhist-phone-one']); ?><?php } ?></a>
+							<a href="tel:<?php echo esc_attr($prykhist_options['prykhist-phone-two']); ?>"><?php if($prykhist_options['prykhist-phone-two']) { ?><?php echo esc_attr($prykhist_options['prykhist-phone-two']); ?><?php } ?></a>
 						</div>
 
-						<div class="footer__location">
-							<p>
-								м. Нікополь, вул. І.Богуна 6-б, офіс 208 <br>
-								(р-н ТРЦ «Billa»), 53213
-							</p>
+						<div class="footer__location" style="max-width: 230px;">
+							<p><?php if($prykhist_options['prykhist-location']) { ?><?php echo $prykhist_options['prykhist-location']; ?><?php } ?></p>
 						</div>
 
-						<div class="footer__email">
-							<a href="mailto:prikhist@gmail.com">prikhist@gmail.com</a>	
+					
+						<div class="footer__email">							
+							<a href="mailto:<?php echo esc_attr($prykhist_options['prykhist-email']); ?>"><?php if($prykhist_options['prykhist-email']) { ?><?php echo esc_attr($prykhist_options['prykhist-email']); ?><?php } ?></a>	
 						</div>
 
 					</div>
@@ -99,13 +90,14 @@ global $prykhist_options;
 
 				<div class="col-lg-12">
 					<ul class="footer__social d-flex">
-						<li class="social__item d-flex"><a href="https://www.facebook.com/groups/prikhist" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+					
+						<li class="social__item d-flex"><?php //echo do_shortcode('[cn-social-icon selected_icons="1"]'); ?><a href="https://www.facebook.com/groups/prikhist" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 						<li class="social__item d-flex"><a href="https://t.me/prikhist" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
 						<li class="social__item d-flex"><a href="https://www.youtube.com/channel/UCAelUK06P_EeLwHWTWHCchQ" target="_blank"><i class="fab fa-youtube"></i></a></li>
 					</ul> 
 				</div>					
 				<div class="col-lg-12">
-					<a class="rights" href="#">Громадська організація “Прихист” © 2019</a> 
+					<a class="rights" href="#"><?php if($prykhist_options['prykhist-copyright']) { ?><?php echo esc_attr($prykhist_options['prykhist-copyright']); ?><?php } ?></a> 
 				</div>					
 			</div>
 			<!-- /.row -->

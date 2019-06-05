@@ -277,11 +277,11 @@
      */
 
     Redux::setSection( $opt_name, array(
-        'title'            => __( 'Настройка шапки', 'prykhist' ),
-        'id'               => 'header',
-        'desc'             => __( 'Настройки для шапки сайта', 'redux-framework-demo' ),
+        'title'            => __( 'Главные настройки', 'prykhist' ),
+        'id'               => 'settings',
+        'desc'             => __( 'Настройки реквизитов сайта', 'redux-framework-demo' ),
         'customizer_width' => '400px',
-        'icon'             => 'el el-arrow-up'
+        'icon'             => 'el el-cog'
     ) );
 
     Redux::setSection( $opt_name, array(
@@ -295,19 +295,78 @@
                 'id'       => 'prykhist-logo',
                 'type'     => 'media',
                 'url'      => true,
-                'title'    => __( 'Ваш логотип', 'redux-framework-demo' ),
+                'title'    => __( 'Логотип Вашей компании', 'redux-framework-demo' ),
                 'compiler' => 'true',
                 //'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
-                'desc'     => __( 'Загрузите Ваш логотип', 'redux-framework-demo' ),
+                'desc'     => __( 'Загрузите изображение', 'redux-framework-demo' ),
                 'subtitle' => __( 'Рекомендуемый размер: 335x66 пикселей', 'redux-framework-demo' ),
                 'default'  => '',
-                //'hint'      => array(
-                //    'title'     => 'Hint Title',
-                //    'content'   => 'This is a <b>hint</b> for the media field with a Title.',
-                //)
+            ),
+            array(
+                'id'       => 'prykhist-description',
+                'type'     => 'textarea',
+                'title'    => __( 'Описание Вашей компании', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите краткое описание', 'redux-framework-demo' ),
+                'desc'     => __( 'Не более 256 символов (включая пробелы)', 'redux-framework-demo' ),
+                
+            ),
+        )
+    ) );   
+
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Ваши контакты', 'redux-framework-demo' ),
+        'id'               => 'your-contacts',
+        'subsection'       => true,
+        'customizer_width' => '450px',
+        'desc'             => __( 'Введите Ваши контакты', 'redux-framework-demo' ),
+        'fields'           => array(  
+            array(
+                'id'       => 'prykhist-phone-one',
+                'type'     => 'text',
+                'title'    => __( 'Основной номер', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите Ваш основной номер телефона', 'redux-framework-demo' ),
+            ),
+            array(
+                'id'       => 'prykhist-phone-two',
+                'type'     => 'text',
+                'title'    => __( 'Дополнительный номер', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите Ваш дополнительный номер телефона', 'redux-framework-demo' ),
+                'desc'     => __( 'Например: +380671234567', 'redux-framework-demo' ),
+            ),
+
+            array(
+                'id'       => 'prykhist-location',
+                'type'     => 'text',
+                'title'    => __( 'Ваш адрес', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите Ваш адрес', 'redux-framework-demo' ),
+            ),
+
+            array(
+                'id'       => 'prykhist-email',
+                'type'     => 'text',
+                'title'    => __( 'Ваш Email', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите действующий адрес электронной почты', 'redux-framework-demo' ),
+                'desc'     => __( 'Например: your-name@site.com', 'redux-framework-demo' ),
+                'validate' => 'email',
+                'msg'      => 'custom error message',
+            ),
+
+            array(
+                'id'       => 'prykhist-copyright',
+                'type'     => 'text',
+                'title'    => __( 'Копирайт', 'redux-framework-demo' ),
+                'subtitle' => __( 'Введите ваш копирайт', 'redux-framework-demo' ),
+                //'desc'     => __( 'Например: your-name@site.com', 'redux-framework-demo' ),
+                //'validate' => 'email',
+                //'msg'      => 'custom error message',
             ),
         )
     ) );
+
+
+
+
+
 
     // -> START Basic Fields
     Redux::setSection( $opt_name, array(
