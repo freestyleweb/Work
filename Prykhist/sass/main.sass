@@ -1,0 +1,723 @@
+@import "_vars"
+@import "_fonts"
+	
+body 
+	background-color: #E5E5E5
+	font-family: 'Roboto', sans-serif
+	font-size: 13px	
+	#wpadminbar 
+		.header
+			margin-top: 32px
+
+.center-v 
+	display: flex
+	align-items: center
+
+section
+	padding: 0 0 50px 0
+	img
+		object-fit: cover
+
+	.breadcrumbs
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		color: #9dabb5
+		margin: 30px 0 25px 0
+		span
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			a
+				color: #808c94
+				//text-decoration: none
+				line-height: 30px
+
+
+
+
+/* ==================== HEADER ==================== */
+
+.header 
+	position: relative
+	width: 100%
+	z-index: 10
+
+.header__logo 
+	display: flex
+	background-color: $darkBlue
+	margin: 0
+	padding: 35px 0
+	justify-content: center
+
+.header__logo img 
+	width: 220px
+
+
+/*  ==================== Hamburger  ==================== */
+
+.hamb__wrap 
+	display: none
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after 
+	background-color: $lightBlue
+	width: 25px
+	height: 3px
+	border-radius: 0
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before 
+	background-color: $lightBlue
+
+.hamburger-inner::before 
+	top: -8px
+
+.hamburger-inner::after 
+	bottom: -8px
+
+
+/*  ==================== Mobile menu  ==================== */
+
+.mobile-menu__wrap 
+	position: fixed
+	display: none
+	width: 100%
+	z-index: 5
+
+	#menu-mobile-menu
+		width: 100%
+		padding: 0
+
+.mobile-menu 	
+	display: none
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	width: 100%
+	height: 100vh
+	background-color: rgba(48, 77, 99, 0.95)
+	margin: 0
+	padding: 0
+	padding-top: 60px
+	transition: .3s
+	transform: translate(0%, -100%)
+
+.mobile-menu__active, .is-active
+	display: flex 
+	transform: translate(0%, 0%)
+
+.is-active 
+	position: relative
+	z-index: 6
+
+.mobile-search__wrap 
+	display: none
+	position: absolute
+	right: 30px
+	top: 16px
+	font-size: 1.2em
+	z-index: 999
+	color: $lightBlue
+	cursor: pointer
+
+.mobile-search 
+//	display: none
+//	position: fixed
+	right: 0
+	top: 0
+
+.mobile-search 
+	position: fixed !important
+	z-index: 10
+	display: none
+	flex-direction: column
+	align-items: center
+	width: 100%
+	background-color: rgba(48, 77, 99, 0.95)
+	margin: 0
+	padding: 0
+	padding-top: 60px
+	transition: .3s
+	transform: translate(0%, -200%)
+
+.mobile-search__active, .is-active 
+	transform: translate(0%, 0%)
+
+.mobile-menu__link, .hamb__wrap 
+	position: absolute
+	left: 15px
+	top: 0
+	font-size: 1.29em
+	color: $lightBlue
+	z-index: 100
+	display: none
+
+.mobile-menu__items 
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 100%
+	height: 100vh
+	margin: 0
+	padding: 0
+
+	.current-menu-item, .current_page_item, .mobile-menu__item 
+		list-style: none
+		width: 100%
+
+.mobile-menu__item a 	
+	display: flex
+	justify-content: center
+	padding: 12px 0
+	text-decoration: none
+	text-transform: uppercase
+	color: $lightBlue
+	font-size: .86rem
+	font-weight: 700
+	letter-spacing: .05em
+.current-menu-item a, .current_page_item a
+	color: $darkBlue
+
+.current-menu-item, .current_page_item, .mobile-menu__item a:hover 
+	background-color: $lightBlue
+	color: $darkBlue !important
+	transition: all .3s ease
+	font-weight: 900
+
+.line 
+	display: block	
+	width: 70%
+	height: 1px
+	background-color: $lightBlue
+	// position: fixed
+	// left: -50%
+	// right: -50%
+	// bottom: 47%
+	margin: 0 auto
+	margin-bottom: 5px
+
+.mobile-menu__social 
+	display: flex
+	list-style: none
+	// position: fixed
+	// left: 0
+	// right: 0
+	// bottom: 33%
+	text-decoration: none
+	justify-content: center
+	margin: 0
+	padding: 0
+
+.social-item 
+	margin: 0 20px 0 0
+	width: 32px
+	height: 32px
+	border: 1px solid $lightBlue
+	border-radius: 50%
+	text-align: center
+	line-height: 32px
+
+.social-item:hover 
+	background-color: $lightBlue
+	color: $darkBlue
+	transition: all .3s ease
+
+.social-item a:hover 
+	color: $darkBlue
+	transition: all .3s ease
+
+.social-item a 
+	display: block
+
+.social-item:last-child 
+	margin: 0
+
+.social-item a 
+	color: $lightBlue
+
+.contacts, .location 
+	width: 70%
+	text-align: center
+	// position: fixed
+	// left: -50%
+	// right: -50%
+	// bottom: 0
+	margin: 0 auto
+	color: $lightBlue
+	font-size: 12px
+	line-height: 20px
+
+.phones 
+	margin: 0 auto
+
+.phone 
+	display: block
+	text-decoration: none
+	color: $lightBlue
+	font-size: 16px
+	font-weight: 700
+	margin: 10px 0
+
+.mail 
+	margin-bottom: 20px
+
+.mail a 
+	display: block
+	text-decoration: none
+	color: $lightBlue
+
+
+/*  ==================== Navigation  ==================== */
+
+nav 
+	position: relative
+
+
+/*  ==================== Main menu  ==================== */
+
+.main-menu 
+	background-color: $lightCyan
+	text-transform: uppercase	
+
+.main-menu__items 
+	// height: 50px
+	display: flex
+	justify-content: center
+	align-items: center
+	list-style: none
+	margin: 0
+	padding: 0
+
+.main-menu__item 
+	// padding: 16px 15px
+
+.main-menu__item:hover 
+	background-color: $lightBlue
+	transition: all .3s ease
+
+.current-menu-item, .current_page_item.main-menu__item a:hover, .main-menu__item a:focus, .main-menu__item a:active 
+	background-color: $lightBlue
+	transition: all .3s ease
+
+.main-menu__item a 
+	color: $darkBlue
+	text-decoration: none
+	font-size: 1em
+	font-weight: 700
+	display: block
+	padding: 16px 15px
+
+.search 
+	display: flex
+	position: relative
+	margin-left: 15px
+
+.search input, .mobile-search input 
+	display: flex
+	width: 170px
+	height: 30px
+	padding: 10px 30px 10px 13px
+	border: none
+	color: #7DA5B0
+	font-weight: 300
+
+.mobile-search input 
+	width: 94%
+	margin-bottom: 10px
+	height: 40px
+
+.search button, .mobile-search button 
+	position: absolute
+	right: 0
+	bottom: 0
+	border: none
+	background-color: transparent
+	color: #7DA5B0
+	line-height: 30px	
+	cursor: pointer
+
+.mobile-search button 
+	right: 4%
+	bottom: 10px
+	line-height: 38px	
+
+/* ==================== Pagination ==================== */
+
+.pagination__items
+	display: flex
+	justify-content: center
+	align-items: center
+	list-style: none
+	margin: 0 0 30px 0
+	padding: 0
+	&_item
+		margin: 0
+		padding: 0 15px 0 0
+		color: rgba(48, 77, 99, 0.7)		
+		a
+			text-decoration: none
+			color: rgba(48, 77, 99, 0.7)
+			font-weight: 500
+			&:hover, &:focus, &:active
+				color: $darkBlue
+				font-weight: 900
+				transition: all .3s ease
+		i
+			font-size: 1.35em
+
+/* ==================== HOME SECTION ====================*/
+
+.home__section 
+	
+
+.rubric 
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: $darkBlue
+	// width: 210px
+	height: 30px
+	margin: 30px 0 25px 0
+	&__link
+		display: flex
+		color: $white
+		text-decoration: none
+		text-transform: uppercase
+		font-weight: bold
+		letter-spacing: .05em
+		&-warn
+			background-color: $warning
+
+.block__news
+	display: flex
+	width: 100%
+
+.card__news
+	display: flex
+	flex-wrap: wrap
+	background-color: #fff
+	text-decoration: none
+	margin-bottom: 30px
+	border-bottom: 3px solid rgba(48, 77, 99, 0.5)	
+	&:hover, &:focus, &:active
+		border-bottom: 3px solid $darkBlue
+		transition: all .3s ease
+	&_image
+		width: 100%
+		height: auto
+	&_offer
+		padding: 25px
+		position: relative
+	&_title
+		font-family: Roboto
+		font-weight: 900
+		font-size: 22px
+		line-height: 30px
+		color: $darkBlue
+		text-decoration: none
+		margin-top: 0
+	&_description
+		margin: 0
+		padding: 0
+		font-size: 1.15em
+		line-height: 1.72em
+		color: $darkBlue
+		margin: 0
+	&-big
+		min-height: 430px
+	&-warn
+		border-bottom: 3px solid rgba(254, 91, 91, 0.5)	
+		&:hover, &:focus, &:active
+			border-bottom: 3px solid $warning
+			transition: all .3s ease
+
+.big__news_title
+	margin: 0
+	padding: 0
+	position: absolute
+	left: 25px
+	right: 25px
+	top: -70px
+	font-family: Roboto
+	font-weight: 900
+	font-size: 1.58em
+	letter-spacing: .05em
+	line-height: 26px
+	color: #FFFFFF
+	text-shadow: 0px 2px 4px #000000
+
+
+/* ==================== NEWS SECTION ====================*/
+
+.news__section, .rezonans__section 
+	padding: 0
+
+.block__news-wrapper
+	display: flex
+	width: 100%
+	margin: 0 auto
+
+.last__news
+	&_card
+		display: flex
+		width: 100%
+		background-color: $white
+		padding: 20px
+		text-decoration: none
+		border-bottom: 3px solid rgba(48, 77, 99, 0.5)
+		&:last-child
+			margin-bottom: 30px	
+		&:hover, &:focus, &:active
+			border-bottom: 3px solid $darkBlue
+			transition: all .3s ease
+	&_image
+		min-width: 210px
+		max-width: 210px
+		img
+			// width: 100%
+			// height: 100%
+			object-fit: cover
+	&_offer
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		padding: 0 0 0 15px
+	&_title
+		margin: 0 0 10px 0
+		padding: 0
+		font-size: 18px
+	&_description
+		margin: 0
+
+.warn
+	border-bottom: 3px solid rgba(254, 91, 91, 0.5)	
+	&:hover, &:focus, &:active
+		border-bottom: 3px solid $warning
+		transition: all .3s ease
+	h1, h2, h3, h4, h5, h6, p
+		color: $warning
+
+.last__news-mini
+	.card__news_title
+		font-size: 18px
+		margin-bottom: 13.5px
+
+
+		
+/* ==================== journal ====================*/
+
+.journal__wrap
+	display: flex
+	width: 100%
+
+/* ==================== FOOTER ====================*/
+
+.footer 
+	background: $darkBlue
+	padding: 45px 0
+
+
+.footer__logo img 
+	max-width: 170px
+	text-decoration: none
+
+
+.footer__description 
+	color: #9dabb5
+	font-family: Roboto
+	font-size: 12px
+	line-height: 22px
+	margin-top: 20px
+
+.footer__contacts
+	display: block
+	margin-left: 15px
+	color: #9dabb5
+	margin-top: 3.5em
+	.footer__phones
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f095'
+			font-family: 'Fontawesome'
+			font-size: 13px
+			line-height: 31px
+			text-align: center
+			border: 1px solid #9dabb5
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 6px
+		&:hover:before
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease	
+		a
+			display: block
+			color: #9dabb5
+			text-decoration: none		
+			font-weight: 500
+			font-family: Roboto
+			font-size: 13px
+			line-height: 22px
+			&:hover
+				color: $white
+				transition: all .3s ease
+	.footer__location
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f124'
+			font-family: 'Fontawesome'
+			font-size: 13px
+			line-height: 31px
+			text-align: center
+			border: 1px solid #9dabb5
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 6px
+		&:hover:before
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease	
+		p
+			color: #9dabb5
+			font-size: 12px
+			line-height: 22px
+			font-weight: normal
+			font-family: Roboto
+			&:hover
+				color: $white
+				transition: all .3s ease
+			
+	.footer__email
+		position: relative
+		margin-left: 45px
+		&:before
+			content: '\f0e0'
+			font-family: 'Fontawesome'
+			font-size: 13px
+			line-height: 31px
+			text-align: center
+			border: 1px solid #9dabb5
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			position: absolute
+			left: -40px
+			top: 5px
+		&:hover:before
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease	
+		a
+			position: relative
+			top: 8px
+			display: block
+			color: #9dabb5
+			text-decoration: none		
+			font-family: Roboto
+			font-size: 12px
+			line-height: 22px	
+			&:hover
+				color: $white
+				transition: all .3s ease
+
+.footer__form
+	display: flex	
+	justify-content: flex-end
+	margin-top: 45px	
+	font-size: 12px
+	&_phone, &_mail, &_message
+		display: flex
+		justify-content: flex-end
+		color: #9dabb5
+		margin-bottom: 15px
+		&:hover
+			color: $white
+			transition: all .3s ease
+	&_btn
+		display: flex
+		justify-content: flex-end
+		button
+			cursor: pointer
+			width: 200px
+			background-color: $darkBlue
+			font-family: 'Roboto', sans-serif
+			font-size: 11px
+			line-height: 30px
+			text-align: center
+			letter-spacing: .15em
+			color:	#9dabb5
+			text-transform: uppercase
+			font-weight: 700
+			border: 1px solid #9dabb5
+			&:hover
+				background-color: #B3E7E8
+				color: $darkBlue
+				font-weight: 900
+				transition: all .3s ease
+
+	label
+		margin-right: 15px
+		text-align: right
+	input, textarea
+		min-width: 200px
+		height: 30px
+		padding: 10px 0 10px 10px
+		background-color: $darkBlue
+		border: 1px solid #9dabb5
+		color: #9dabb5
+		&:hover, &:focus, &:active
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease
+	textarea
+		height: 105px
+
+#menu-footer-social, .footer-social
+	display: flex
+	justify-content: center
+	margin: 20px 0 15px 0
+	padding: 0
+	.social__item
+		display: flex
+		margin-right: 22px
+		&:last-child
+			margin-right: 0px
+		i
+			color: #9dabb5
+			font-size: 16px
+			line-height: 32px
+			text-align: center
+			border-radius: 50%
+			width: 32px
+			height: 32px
+			// margin-right: 22px
+			&:hover
+				//background-color: #B3E7E8
+				color: $white
+				transition: all .3s ease
+
+.rights
+	color: #9dabb5
+	justify-content: center
+	font-size: 0.86em
+	display: flex
+	margin: 0 auto
+	padding: 0
+	text-decoration: none
+	line-height: 20px
+	&:hover
+		color: $white
+
+	
+
+
+
+@import "_media"
+	
