@@ -5,6 +5,9 @@ body
 	background-color: #E5E5E5
 	font-family: 'Roboto', sans-serif
 	font-size: 13px	
+	#wpadminbar 
+		.header
+			margin-top: 32px
 
 .center-v 
 	display: flex
@@ -14,6 +17,21 @@ section
 	padding: 0 0 50px 0
 	img
 		object-fit: cover
+
+	.breadcrumbs
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		color: #9dabb5
+		margin: 30px 0 25px 0
+		span
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			a
+				color: #808c94
+				//text-decoration: none
+				line-height: 30px
 
 
 
@@ -36,7 +54,7 @@ section
 	width: 220px
 
 
-/*  ==================== Hamburger  ==================== */
+/*	==================== Hamburger	==================== */
 
 .hamb__wrap 
 	display: none
@@ -57,13 +75,17 @@ section
 	bottom: -8px
 
 
-/*  ==================== Mobile menu  ==================== */
+/*	==================== Mobile menu	==================== */
 
 .mobile-menu__wrap 
 	position: fixed
 	display: none
 	width: 100%
 	z-index: 5
+
+	#menu-mobile-menu
+		width: 100%
+		padding: 0
 
 .mobile-menu 	
 	display: none
@@ -98,13 +120,12 @@ section
 	cursor: pointer
 
 .mobile-search 
-	display: none
-	position: fixed
+//	display: none
+//	position: fixed
 	right: 0
 	top: 0
-
 .mobile-search 
-	position: fixed
+	position: fixed !important
 	z-index: 10
 	display: none
 	flex-direction: column
@@ -115,7 +136,7 @@ section
 	padding: 0
 	padding-top: 60px
 	transition: .3s
-	transform: translate(0%, -100%)
+	transform: translate(0%, -200%)
 
 .mobile-search__active, .is-active 
 	transform: translate(0%, 0%)
@@ -137,29 +158,32 @@ section
 	height: 100vh
 	margin: 0
 	padding: 0
+	list-style: none
 
-.mobile-menu__item 
+.current-menu-item, .current_page_item, .mobile-menu__item 
 	list-style: none
 	width: 100%
 
 .mobile-menu__item a 	
 	display: flex
 	justify-content: center
-	padding: 7px 0
+	padding: 12px 0
 	text-decoration: none
 	text-transform: uppercase
 	color: $lightBlue
 	font-size: .86rem
 	font-weight: 700
 	letter-spacing: .05em
-
-.mobile-menu__item a:hover 
-	background-color: $lightBlue
+.current-menu-item a, .current_page_item a
 	color: $darkBlue
+
+.current-menu-item, .current_page_item, .mobile-menu__item a:hover 
+	background-color: $lightBlue
+	color: $darkBlue !important
 	transition: all .3s ease
 	font-weight: 900
 
-.line 
+.line, .line-dark
 	display: block	
 	width: 70%
 	height: 1px
@@ -170,6 +194,10 @@ section
 	// bottom: 47%
 	margin: 0 auto
 	margin-bottom: 5px
+
+.line-dark
+	background-color: $darkBlue
+	width: 100%
 
 .mobile-menu__social 
 	display: flex
@@ -242,13 +270,13 @@ section
 	color: $lightBlue
 
 
-/*  ==================== Navigation  ==================== */
+/*	==================== Navigation	==================== */
 
 nav 
 	position: relative
 
 
-/*  ==================== Main menu  ==================== */
+/*	==================== Main menu	==================== */
 
 .main-menu 
 	background-color: $lightCyan
@@ -265,12 +293,11 @@ nav
 
 .main-menu__item 
 	// padding: 16px 15px
-
 .main-menu__item:hover 
 	background-color: $lightBlue
 	transition: all .3s ease
 
-.main-menu__item a:hover, .main-menu__item a:focus, .main-menu__item a:active 
+.current-menu-item, .current_page_item.main-menu__item a:hover, .main-menu__item a:focus, .main-menu__item a:active 
 	background-color: $lightBlue
 	transition: all .3s ease
 
@@ -285,6 +312,7 @@ nav
 .search 
 	display: flex
 	position: relative
+	margin-left: 15px
 
 .search input, .mobile-search input 
 	display: flex
@@ -480,9 +508,169 @@ nav
 		
 /* ==================== journal ====================*/
 
-.journal__wrap
-	display: flex
+.journal__themes
+	color: $darkBlue
+	font-weight: 700
+.card__journal_theme
+	color: $darkBlue
+	margin: 10px 0
+.journal__section
+	.card__news-mini
+		padding: 15px
+	.card__news_offer
+		padding: 15px 0 0 0
+
+/* ==================== Post Page ====================*/
+
+.open-post
+	display: inline-block
+	margin-bottom: 30px	
+	h3
+		font-family: Roboto
+		font-weight: 900
+		font-size: 29px
+		line-height: 42px
+		color: $darkBlue
+		margin: 0
+		padding: 0
+		
+	&__text
+		p			
+			font-family: Roboto
+			font-size: 14px
+			line-height: 24px
+			color: $darkBlue
+			text-align: justify
+	&__image 
+		max-width: 445px
+		display: inline-block
+		float: right
+		margin-left: 15px
+
+.other-news
+	h3
+		margin: 0
+		padding: 0
+		font-size: 18px
+
+
+/* Sweep To Top */
+.hvr-sweep-to-top 
+	display: inline-block
+	vertical-align: middle
+	-webkit-transform: perspective(1px) translateZ(0)
+	transform: perspective(1px) translateZ(0)
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+	position: relative
+	-webkit-transition-property: color
+	transition-property: color
+	-webkit-transition-duration: 0.3s
+	transition-duration: 0.3s
+
+.hvr-sweep-to-top:before 
+	content: ""
+	position: absolute
+	z-index: 9
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #2098D1
+	-webkit-transform: scaleY(0)
+	transform: scaleY(0)
+	-webkit-transform-origin: 50% 100%
+	transform-origin: 50% 100%
+	-webkit-transition-property: transform
+	transition-property: transform
+	-webkit-transition-duration: 0.3s
+	transition-duration: 0.3s
+	-webkit-transition-timing-function: ease-out
+	transition-timing-function: ease-out
+
+.hvr-sweep-to-top:hover, .hvr-sweep-to-top:focus, .hvr-sweep-to-top:active 
+	color: white
+
+.hvr-sweep-to-top:hover:before, .hvr-sweep-to-top:focus:before, .hvr-sweep-to-top:active:before 
+	-webkit-transform: scaleY(1)
+	transform: scaleY(1)
+
+	
+
+/* ==================== AFISHA ====================*/
+
+
+.hvr-sweep-to-top
+	// padding: 10px 20px 30px 20px
 	width: 100%
+
+.hvr-sweep-to-top:before
+	background-color: $darkBlue
+
+.hvr-sweep-to-top:hover
+	.afisha-more
+		border: 1px solid #9dabb5
+		&:hover
+			background-color: #B3E7E8
+			color: $darkBlue
+			font-weight: 700
+			transition: all .3s ease
+
+.afisha-item
+	width: 100%
+	
+.afisha__news
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	width: 100%
+	// height: 100%
+	color: transparent
+	background-position: center top
+	background-size: cover
+	margin-bottom: 30px
+	a
+		color: transparent
+		display: block
+		text-decoration: none
+		padding: 10px 15px
+	&:hover 
+		a
+			color: $white
+	.afisha-date
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		font-size: 18px
+		font-weight: 700
+		.afisha-time
+			font-size: 14px
+			font-weight: 400
+	.afisha-title
+		font-size: 32px
+		text-align: center
+		margin: 0
+		padding: 0
+		h4
+			margin: 60px 0 0 0
+			padding: 0
+		.afisha-subtitle
+			font-size: 20px
+			margin: 20px 0 60px 0
+			padding: 0
+	.afisha-locate
+		font-size: 14px
+		font-weight: 700
+		.afisha-city
+			font-size: 12px
+			font-weight: 400
+	.afisha-more
+		text-align: center
+		display: block
+		width: 100%
+		border: 2px solid transparent
+		margin-top: 30px
+
 
 
 /* ==================== FOOTER ====================*/
@@ -498,7 +686,7 @@ nav
 
 
 .footer__description 
-	color: $lightBlue
+	color: #9dabb5
 	font-family: Roboto
 	font-size: 12px
 	line-height: 22px
@@ -507,7 +695,7 @@ nav
 .footer__contacts
 	display: block
 	margin-left: 15px
-	color: $white
+	color: #9dabb5
 	margin-top: 3.5em
 	.footer__phones
 		position: relative
@@ -518,7 +706,7 @@ nav
 			font-size: 13px
 			line-height: 31px
 			text-align: center
-			border: 1px solid #B3E7E8
+			border: 1px solid #9dabb5
 			border-radius: 50%
 			width: 32px
 			height: 32px
@@ -526,17 +714,20 @@ nav
 			left: -40px
 			top: 6px
 		&:hover:before
-			color: $darkBlue
-			background-color: #B3E7E8
+			color: $white
+			border: 1px solid $white
 			transition: all .3s ease	
 		a
 			display: block
-			color: $white
+			color: #9dabb5
 			text-decoration: none		
 			font-weight: 500
 			font-family: Roboto
 			font-size: 13px
 			line-height: 22px
+			&:hover
+				color: $white
+				transition: all .3s ease
 	.footer__location
 		position: relative
 		margin-left: 45px
@@ -546,7 +737,7 @@ nav
 			font-size: 13px
 			line-height: 31px
 			text-align: center
-			border: 1px solid #B3E7E8
+			border: 1px solid #9dabb5
 			border-radius: 50%
 			width: 32px
 			height: 32px
@@ -554,14 +745,19 @@ nav
 			left: -40px
 			top: 6px
 		&:hover:before
-			color: $darkBlue
-			background-color: #B3E7E8
-			transition: all .3s ease
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease	
 		p
+			color: #9dabb5
 			font-size: 12px
 			line-height: 22px
 			font-weight: normal
 			font-family: Roboto
+			&:hover
+				color: $white
+				transition: all .3s ease
+			
 	.footer__email
 		position: relative
 		margin-left: 45px
@@ -571,7 +767,7 @@ nav
 			font-size: 13px
 			line-height: 31px
 			text-align: center
-			border: 1px solid #B3E7E8
+			border: 1px solid #9dabb5
 			border-radius: 50%
 			width: 32px
 			height: 32px
@@ -579,18 +775,21 @@ nav
 			left: -40px
 			top: 5px
 		&:hover:before
-			color: $darkBlue
-			background-color: #B3E7E8
-			transition: all .3s ease
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease	
 		a
 			position: relative
 			top: 8px
 			display: block
-			color: $white
+			color: #9dabb5
 			text-decoration: none		
 			font-family: Roboto
 			font-size: 12px
 			line-height: 22px	
+			&:hover
+				color: $white
+				transition: all .3s ease
 
 .footer__form
 	display: flex	
@@ -600,8 +799,11 @@ nav
 	&_phone, &_mail, &_message
 		display: flex
 		justify-content: flex-end
-		color: $white
+		color: #9dabb5
 		margin-bottom: 15px
+		&:hover
+			color: $white
+			transition: all .3s ease
 	&_btn
 		display: flex
 		justify-content: flex-end
@@ -614,10 +816,10 @@ nav
 			line-height: 30px
 			text-align: center
 			letter-spacing: .15em
-			color:	$white
+			color:	#9dabb5
 			text-transform: uppercase
 			font-weight: 700
-			border: 1px solid #7C93A0
+			border: 1px solid #9dabb5
 			&:hover
 				background-color: #B3E7E8
 				color: $darkBlue
@@ -632,21 +834,27 @@ nav
 		height: 30px
 		padding: 10px 0 10px 10px
 		background-color: $darkBlue
-		border: 1px solid #7C93A0
-		color: $white
+		border: 1px solid #9dabb5
+		color: #9dabb5
+		&:hover, &:focus, &:active
+			color: $white
+			border: 1px solid $white
+			transition: all .3s ease
 	textarea
 		height: 105px
 
-.footer__social
+#menu-footer-social, .footer__social
+	display: flex
 	justify-content: center
-	margin: 0 0 15px 0
+	margin: 20px 0 15px 0
 	padding: 0
 	.social__item
+		display: flex
 		margin-right: 22px
 		&:last-child
 			margin-right: 0px
 		i
-			color: $white
+			color: #9dabb5
 			font-size: 16px
 			line-height: 32px
 			text-align: center
@@ -655,23 +863,24 @@ nav
 			height: 32px
 			// margin-right: 22px
 			&:hover
-				background-color: #B3E7E8
-				color: $darkBlue
+				//background-color: #B3E7E8
+				color: $white
 				transition: all .3s ease
 
 .rights
-	color: $white
-	text-align: center
+	color: #9dabb5
+	justify-content: center
 	font-size: 0.86em
-	display: block
+	display: flex
 	margin: 0 auto
 	padding: 0
 	text-decoration: none
 	line-height: 20px
+	&:hover
+		color: $white
 
 	
 
 
 
 @import "_media"
-	

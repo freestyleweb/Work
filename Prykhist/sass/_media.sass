@@ -1,8 +1,6 @@
 /* // Medium devices (tablets, less than 992px) */
 
-@media screen and (max-width: 992px)
-	.site-content
-		margin: -72px auto 
+@media screen and (max-width: 992px) 
 	.card__news
 		&_description
 			font-size: 1em
@@ -23,13 +21,9 @@
 
 	.footer__contacts
 		margin: 15px 0 0 0
-		.footer__phones 
-			a
-				font-size: 16px
-				line-height: 32px
 		.footer__phones, .footer__location, .footer__email
 			text-align: center
-			margin: 0 auto	
+			margin: 0
 			padding: 0
 			&:before
 				display: none
@@ -98,6 +92,16 @@
 			margin-bottom: 15px
 		&_offer
 			padding-left: 0
+
+	article
+		padding-top: 50px
+
+	.open-post__image
+		margin: 15px 0 0 0
+		float: none
+		max-width: 100%
+	.other-news, .line-dark
+		display: none
 
 @media screen and (max-width: 576px)	
 	.big__news_title
