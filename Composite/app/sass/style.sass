@@ -2,7 +2,19 @@
 @import '../libs/bootstrap/bootstrap-reboot.min'
 @import '../libs/bootstrap/bootstrap-grid.min'
 //@import '../../node_modules/slick-carousel/slick/slick'
-//@import '../../node_modules/magnific-popup/dist/magnific-popup'
+@import '../css/magnific-popup'
+//@import '../fonts/fonts'
+
+@font-face 
+    font-family: 'Font Awesome'
+    src: url('../fonts/fontawesome/fa-solid-900.ttf')
+    src: url('../fonts/fontawesome/fa-solid-900.eot')
+    src: url('../fonts/fontawesome/fa-solid-900.svg')
+    src: url('../fonts/fontawesome/fa-solid-900.woff')
+    src: url('../fonts/fontawesome/fa-solid-900.woff2')
+
+
+
 
 
 $cyan: #009EE0
@@ -19,9 +31,8 @@ html
 body
     font-family: $roboto
 
-// section
-//     position: absolute
-//     z-index: -1
+section
+    margin-top: 80px
 
 .section__title
     font-size: 1.5rem
@@ -101,6 +112,10 @@ body
             color: #ffffff
         span
             margin-right: 6px
+
+.sticky-wrapper
+    position: relative !important
+    z-index: 99 !important
 
 .header__nav
     background-color: #fff
@@ -211,10 +226,10 @@ body
     background-repeat: no-repeat
     background-position: right bottom
     background-size: 45%
-    position: absolute
-    z-index: -1
-    left: 0
-    right: 0
+    // position: absolute
+    // z-index: -1
+    // left: 0
+    // right: 0
 
 .applaying__accordian
     h3
@@ -234,27 +249,114 @@ body
     color: $textColor
 
 
+// Section Advantages
+
 .advantages
-    margin-top: 510px
-    position: absolute
-    z-index: -2
-    left: 0
-    right: 0
-    &__item
-        background-repeat: no-repeat
-        background-position: center top
-        padding-top: 80px
+    margin-top: 0
+
+.advantages__item
+    background-repeat: no-repeat
+    background-position: center top
+    padding-top: 80px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-title
+        text-align: center
+        font-size: 1.5rem
+        font-weight: 900
+        color: $textColor
+        margin: 0
+    &-description
+        text-align: center
+        font-size: .9rem
+        font-weight: 400
+        color: $textColor
+
+
+// Section Products
+
+.products__gallery
+    display: flex
+    flex-wrap: wrap
+
+// Section Video
+
+.video
+    .slick-initialized .slick-slide
+        height: auto
+    
+
+.slick-initialized .slick-slide 
+    display: flex !important
+    justify-content: center !important
+
+.slick-next::before
+    content: '\f105'
+    font-family: 'Font Awesome'
+    
+.slick-prev::before
+    content: '\f104'
+    font-family: 'Font Awesome'
+.slick-prev::before, .slick-next::before
+    color: $accent
+    font-size: 2rem
+
+
+//Map
+
+.our-map
+    height: 600px
+    margin: 0
+    padding: 0
+    
+//Footer
+
+.footer
+    background: url('../img/footer-bg.jpg') no-repeat center bottom / cover 
+    height: 480px
+    width: 100%
+    position: relative
+    &__overlay
+        background-color: rgba(0,158,224,0.6)
+        position: absolute
+        left: 0
+        top: 0
+        height: 480px
+        z-index: 2
+        display: block
+        width: 100%
+    &__wrapper
+        position: relative
+        z-index: 3
+        width: 100%
+    &__logo
         display: flex
-        flex-direction: column
-        align-items: center
-        &-title
-            text-align: center
-            font-size: 1.5rem
-            font-weight: 900
-            color: $textColor
-            margin: 0
-        &-description
-            text-align: center
-            font-size: .9rem
-            font-weight: 400
-            color: $textColor
+        &-link
+            padding: 17px 26px
+            background-color: #ffffff
+    &__nav-products
+        padding-top: 78px
+    &__nav-contacts
+        padding-top: 78px
+    &__nav-menu
+        margin: 0
+        padding: 0
+        line-height: 2.75rem
+    &__nav-item
+        display: block
+        width: 100%
+        font-size: 0.75rem
+        a
+            text-decoration: none
+            color: rgba(255,255,255,.75)
+    &__nav-item:first-child a
+        text-transform: uppercase        
+        font-weight: 700
+        color: rgba(255,255,255,1)
+
+        
+        
+
+    
+
