@@ -163,7 +163,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="advantages__items">
-            <div class="advantages__item" style="background-image: url(img/icons/advantages-icon-1.svg)">
+            <div class="advantages__item animated wobble" style="background-image: url(img/icons/advantages-icon-1.svg)">
               <h4 class="advantages__item-title">Производство</h4>
               <p class="advantages__item-description">
                 Собственное современное производство полного цикла
@@ -304,14 +304,20 @@
                 <li class="footer__nav-item"><a href="#">Украина, г. Кропивницкий, ул. Серова, 25</a></li>
                 <li class="footer__nav-item"><a href="#">+38 (066) 021-19-98</a></li>
                 <li class="footer__nav-item"><a href="#">+38 (066) 276-75-56 </a></li>
-                <li class="footer__nav-item"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="footer__nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></li>
               </ul>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="footer__form">
-              <form action="" class="calling__form">
-                <input type="Hello">
+              <form action="" class="form">
+                <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
+                <label class="footer__form-subtitle" for="">Наш технический специалист перезвонит и <span>бесплатно</span> проконсультирует Вас!</label>
+                <label class="footer__form-name" for="name">Ваше имя:</label>
+                <input type="name" placeholder="Введите Ваше имя" required>
+                <label class="footer__form-phone" for="phone">Ваш номер телефона:</label>
+                <input type="tel" pattern="[0-9]{10}" placeholder="Номер телефона в формате: 0671234567" required>
+                <button class="footer__form-btn" type="submit">Закажите звонок</button>
               </form>
             </div>
           </div>
