@@ -279,6 +279,21 @@ section
 .products__gallery
     display: flex
     flex-wrap: wrap
+    transition: all .5s;
+
+.products__gallery-item
+    overflow: hidden
+    // width: 100%;
+    // height: 100%;
+    img
+        -moz-transition: all 1s ease-out
+        -o-transition: all 1s ease-out
+        -webkit-transition: all 1s ease-out
+        &:hover
+            -webkit-transform: scale(1.1)
+            -moz-transform: scale(1.1)
+            -o-transform: scale(1.1)
+        
 
 // Section Video
 
@@ -301,6 +316,10 @@ section
 .slick-prev::before, .slick-next::before
     color: $accent
     font-size: 2rem
+
+
+
+
 
 
 //Map
