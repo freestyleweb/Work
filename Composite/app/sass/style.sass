@@ -5,6 +5,7 @@
 @import '../css/magnific-popup'
 @import '../css/animate'
 
+
 @font-face 
     font-family: 'Font Awesome'
     src: url('../fonts/fontawesome/fa-solid-900.ttf')
@@ -283,6 +284,8 @@ section
     transition: all .5s;
 
 .products__gallery-item
+    width: 370px
+    height: 410px
     overflow: hidden
     // width: 100%;
     // height: 100%;
@@ -290,6 +293,7 @@ section
         -moz-transition: all 1s ease-out
         -o-transition: all 1s ease-out
         -webkit-transition: all 1s ease-out
+        max-height: 410px
         &:hover
             -webkit-transform: scale(1.2)
             -moz-transform: scale(1.2)
@@ -333,20 +337,22 @@ section
 //Footer
 
 .footer
-    background: url('../img/footer-bg.jpg') no-repeat center bottom / cover 
+    background: url('../img/footer-bg-new.jpg') no-repeat
+    background-position-x: left
+    background-position-y: bottom
     min-height: 480px
     width: 100%
     position: relative
-    padding: 0 0 80px 0
-    &__overlay
-        background-color: rgba(0,158,224,0.6)
-        position: absolute
-        left: 0
-        top: 0
-        min-height: 520px
-        z-index: 2
-        display: block
-        width: 100%
+    padding: 85px 0
+    // &__overlay
+    //     background-color: rgba(0,158,224,0.6)
+    //     position: absolute
+    //     left: 0
+    //     top: 0
+    //     min-height: 520px
+    //     z-index: 2
+    //     display: block
+    //     width: 100%
         // padding: 0 0 80px 0
     &__wrapper
         position: relative
@@ -355,12 +361,12 @@ section
     &__logo
         display: flex
         &-link
-            padding: 17px 26px
-            background-color: #ffffff
-    &__nav-products
-        padding-top: 78px
-    &__nav-contacts
-        padding-top: 78px
+            // padding: 17px 26px
+            // background-color: #ffffff
+    // &__nav-products
+    //     padding-top: 78px
+    // &__nav-contacts
+    //     padding-top: 78px
     &__nav-menu
         margin: 0
         padding: 0
@@ -368,12 +374,14 @@ section
     &__nav-item
         display: block
         width: 100%
-        font-size: 0.75rem
+        font-size: 0.9rem
+        padding-left: 5px
         a
             text-decoration: none
             color: rgba(255,255,255,.75)
             // &:hover
             //     color: rgba(255, 255, 255, 1)
+        
     &__nav-item:first-child a
         text-transform: uppercase        
         font-weight: 700
@@ -382,46 +390,61 @@ section
 .footer__nav-contacts
     .footer__nav-menu
         .footer__nav-item
-            //padding-left: 19px
+            margin-left: -10px
             &:nth-child(2):before
                 content: '\f3c5'
                 font-family: 'Font Awesome'
-                margin-right: 5px
+                //margin-left: -10px
                 color: rgba(255, 255, 255, .75)
                 // &:hover
                 //     color: rgba(255, 255, 255, 1)
+            // &:nth-child(2)
+            //     margin-left: 0
+            //     a
+            //         padding-left: 15px
             &:nth-child(3):before, &:nth-child(4):before
                 content: '\f095'
                 font-family: 'Font Awesome'
-                margin-right: 5px
+                //margin-right: 5px
                 color: rgba(255, 255, 255, .75)
             &:nth-child(5) a
                 margin-right: 19px
                 font-size: 14px
+            a
+                padding-left: 10px
+            &:last-child
+                margin-left: -16px
+                margin-top: 34px
+                a
+                    font-size: 1.2rem
+                    transition: all .3s ease
+                    &:hover
+                        color: rgba(255, 255, 255, 1)
+            
 
 .footer__form
-    margin-top: 78px
-    margin-bottom: 10px
+    // margin-top: 78px
+    // margin-bottom: 10px
     padding: 32px 25px
     background-color: #fff
     &-title
-        font-size: 16px
+        font-size: 18px
         font-weight: 900
         color: $lightAccent
         display: flex
         justify-content: center
     &-subtitle
-        font-size: 12px
+        font-size: 14px
         // font-weight: 400
         // display: flex
         // justify-content: center
         text-align: center
         color: $textColor
         span
-            font-size: 14px
+            font-size: 18px
             font-weight: 900
             color: $lightAccent
-    &-name, &-phone
+    &-name, &-email
         display: flex
         flex-direction: column
         margin: 5px 0
@@ -429,10 +452,11 @@ section
         font-size: 14px
         font-weight: 500
         color: $textColor
-    input
+    input, textarea
         width: 100%
         border: none
         outline: none
+        resize: none
         border-bottom: 1px solid #979b9f
         color: $textColor
         font-size: 14px
@@ -458,6 +482,25 @@ section
             background-color: $lightAccent
             color: #ffffff
             transition: all .25s ease
+
+.copyright
+    font-size: .75rem
+    color: #fff
+    font-weight: 400
+    position: relative
+    bottom: 18px
+    .artjetfly
+        display: inline
+    .freestyle
+        display: inline
+        &__link
+            border-bottom: 1px solid #fff
+            a
+                text-decoration: none
+                color: #ffffff
+
+@import '../css/media.min'
+//@import '../css/animate'
 
         
         

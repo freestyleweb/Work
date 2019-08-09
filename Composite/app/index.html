@@ -25,7 +25,7 @@
     <div class="header__top header__top-contacts">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6">
+          <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 d-none d-sm-block">
             <div class="header__phone">
               <div class="phone">
                 <a href="tel:+380660211998"><span><i class="fas fa-phone"></i></span>+38 (066) 021-19-98</a>
@@ -35,19 +35,19 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4">
+          <div class="col-xl-4 col-lg-4 d-none d-lg-block">
             <div class="header__location">
               <a href="#"><span><i class="fas fa-map-marker-alt"></i></span>Украина, г. Кропивницкий, ул. Серова, 25</a>
             </div>
           </div>
-          <div class="col-lg-1 col-md-1">
+          <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 d-none d-sm-block">
             <div class="header__social">
               <a href="#"><span><i class="fab fa-facebook-f"></i></span></a>
               <a href="#"><span></span><i class="fab fa-instagram"></i></span></a>
               <a href="#"><span></span><i class="fab fa-youtube"></i></span></a>
             </div>
           </div>
-          <div class="col-lg-1 col-md-1">
+          <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12">
             <div class="header__language">
               <a href="#"><span><i class="fas fa-globe-asia"></i></span>Ru</a>
             </div>
@@ -55,13 +55,13 @@
         </div>
       </div>
     </div>
-    <div id="sticker" class="header__nav">
+    <nav id="sticker" class="header__nav">
       <div class="container">
         <div class="row">
-          <div class="col-lg-2 col-md-2 d-flex align-items-center">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
             <a class="header__logo" href="#"><img src="img/logo-blue.png" alt="ArtJetFly"></a>
           </div>
-          <div class="offset-lg-2 col-lg-5 col-md-5 align-items-center">
+          <div class="offset-xl-2 col-xl-5 col-lg-7 col-md-6 d-sm-none d-none d-md-block align-items-center align-items-center">
             <div class="header__menu">
               <ul class="header__menu-items">
                 <li class="header__menu-item"><a href="#applying">Применение</a></li>
@@ -71,14 +71,14 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3 col-md-3 d-flex align-items-center">
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-6 d-flex align-items-center">
             <div class="header__callback">
-              <button class="header__callback-btn">Обратный звонок</button>
+              <button class="header__callback-btn">Напишите нам</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
     <div class="slider">
       <div class="slider__item" style="background-image: url(img/bg-1.jpg)">
 
@@ -92,7 +92,7 @@
     </div>
     <div class="offer">
       <div class="container">
-        <div class="row wow fadeInRight">
+        <div class="row wow fadeInRight" data-wow-delay="0.25s">
           <div class="col-lg-12">
             <h1 class="offer__title">Производство изделий<br>из композитных материалов</h1>
             <div class="offer__description">
@@ -114,10 +114,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="section__title wow fadeInUp" data-wow-delay="0.25s" >
+          <div class="section__title wow fadeInUp" data-wow-delay="0.25s">
             <h2>Сферы применения композитных материалов</h2>
           </div>
-          <div class="section__description wow fadeInUp" data-wow-delay="0.75s" >
+          <div class="section__description wow fadeInUp" data-wow-delay="0.75s">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
           </div>
         </div>
@@ -274,18 +274,18 @@
   </section>
 
   <footer class="footer" id="footer">
-    <div class="footer__overlay">
+    <!-- <div class="footer__overlay">
 
-    </div>
+    </div> -->
     <div class="footer__wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-xl-2 col-lg-2">
             <div class="footer__logo">
-              <a class="footer__logo-link" href="#"><img src="img/logo-blue.png" alt="ArtJetFly"></a>
+              <a class="footer__logo-link" href="#"><img src="img/logo-white.png" alt="ArtJetFly"></a>
             </div>
           </div>
-          <div class="offset-lg-1 col-lg-2">
+          <div class="col-xl-2 col-lg-2">
             <div class="footer__nav-products">
               <ul class="footer__nav-menu">
                 <li class="footer__nav-item"><a href="#">Продукция</a></li>
@@ -297,7 +297,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-xl-4 col-lg-3">
             <div class="footer__nav-contacts">
               <ul class="footer__nav-menu">
                 <li class="footer__nav-item"><a href="#">Контакты</a></li>
@@ -308,17 +308,26 @@
               </ul>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-xl-4 col-lg-5">
             <div class="footer__form">
               <form action="" class="form">
                 <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
-                <label class="footer__form-subtitle" for="">Наш технический специалист перезвонит и <span>бесплатно</span> проконсультирует Вас!</label>
+                <label class="footer__form-subtitle" for="">Наш технический специалист свяжется с Вами и проконсультирует <span>бесплатно!</span></label>
                 <label class="footer__form-name" for="name">Ваше имя:</label>
                 <input type="name" placeholder="Введите Ваше имя" required>
-                <label class="footer__form-phone" for="phone">Ваш номер телефона:</label>
-                <input type="tel" pattern="[0-9]{10}" placeholder="Номер телефона в формате: 0671234567" required>
-                <button class="footer__form-btn" type="submit">Закажите звонок</button>
+                <label class="footer__form-email" for="email">Ваш E-mail</label>
+                <input type="email" placeholder="Введите Ваш E-mail" required>
+                <label class="footer__form-message" for="message">Ваше сообщение</label>
+                <textarea type="textarea" rows="2" placeholder="Введите Ваше сообщение" required></textarea>                
+                <button class="footer__form-btn" type="submit">Отправить сообщение</button>
               </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="copyright">
+              <p class="artjetfly">ArtJetFly, 2019 © Все права защищены</p>  |  <p class="freestyle">Разработка: <span class="freestyle__link"><a href="https://freestyleweb.github.io">Freestyle Web Studio</a></span></p>
             </div>
           </div>
         </div>
