@@ -12,16 +12,25 @@
   <link rel="stylesheet" href="css/slick.css" />
   <link rel="stylesheet" href="css/slick-theme.css" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link href="css/fontawesome.all.min.css" rel="stylesheet">
+  <!-- <link href="css/fontawesome.all.min.css" rel="stylesheet">
   <link href="css/fontawesome.solid.min.css" rel="stylesheet">
-  <link href="css/fontawesome.min.css" rel="stylesheet">
+  <link href="css/fontawesome.min.css" rel="stylesheet"> -->
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+  <link href="css/hamburgers.css" rel="stylesheet">
+  <!-- <link href="css/mmenu-light.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body>
 
+  
 
   <header class="header" id="header">
+      
+      <!-- begin button to top -->
+      <a id="button"></a> 
+      <!-- end button to top -->
     <div class="header__top header__top-contacts">
       <div class="container">
         <div class="row">
@@ -55,53 +64,74 @@
         </div>
       </div>
     </div>
-    <nav id="sticker" class="header__nav">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
-            <a class="header__logo" href="#"><img src="img/logo-blue.png" alt="ArtJetFly"></a>
-          </div>
-          <div class="offset-xl-2 col-xl-5 col-lg-7 col-md-6 d-sm-none d-none d-md-block align-items-center align-items-center">
-            <div class="header__menu">
-              <ul class="header__menu-items">
-                <li class="header__menu-item"><a href="#applying">Применение</a></li>
-                <li class="header__menu-item"><a href="#advantages">Преимущества</a></li>
-                <li class="header__menu-item"><a href="#products">Продукция</a></li>
-                <li class="header__menu-item"><a href="#footer">Контакты</a></li>
-              </ul>
+   
+     
+      <nav class="header__nav" id="sticker">
+        <div class="container" style="position: relative">
+          <div class="row">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
+              <a class="header__logo" href="#"><img src="img/logo-blue.png" alt="ArtJetFly"></a>
             </div>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-6 d-flex align-items-center">
-            <div class="header__callback">
-              <button class="header__callback-btn">Напишите нам</button>
+            <!-- <button class="header__nav-btn">
+              <i class="fas fa-bars"></i>
+            </button> -->
+            <div class="offset-xl-2 col-xl-5 col-lg-7 col-md-6 d-sm-none d-none d-md-block align-items-center align-items-center">
+              
+              <div id="sticker" class="header__menu">
+                <ul class="header__menu-items">
+                  <li class="header__menu-item"><a href="#applying">Применение</a></li>
+                  <li class="header__menu-item"><a href="#advantages">Преимущества</a></li>
+                  <li class="header__menu-item"><a href="#products">Продукция</a></li>
+                  <li class="header__menu-item"><a href="#footer">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-6 d-flex align-items-center">
+              <div class="header__callback">
+                <button data-fancybox data-src="#modal" href="javascript:;" class="header__callback-btn">Напишите нам</button>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="hamburger hamburger--squeeze js-hamburger">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+              <!-- <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button> -->
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-    <div class="slider">
-      <div class="slider__item" style="background-image: url(img/bg-1.jpg)">
+      </nav>
 
-      </div>
-      <div class="slider__item" style="background-image: url(img/bg-2.jpg)">
+    <div class="header__slider">
+      <div class="slider">
+        <div class="slider__item" style="background-image: url(img/bg-1.jpg)">
 
-      </div>
-      <div class="slider__item" style="background-image: url(img/bg-3.jpg)">
+        </div>
+        <div class="slider__item" style="background-image: url(img/bg-2.jpg)">
 
+        </div>
+        <div class="slider__item" style="background-image: url(img/bg-3.jpg)">
+
+        </div>
       </div>
-    </div>
-    <div class="offer">
-      <div class="container">
-        <div class="row wow fadeInRight" data-wow-delay="0.25s">
-          <div class="col-lg-12">
-            <h1 class="offer__title">Производство изделий<br>из композитных материалов</h1>
-            <div class="offer__description">
-              Собственное современное производство полного цикла<br>
-              Изделия любой сложности для всевозможных отраслей
-            </div>
-            <div class="offset-lg-9 col-lg-3">
-              <div class="offer__submit">
-                <button class="offer__submit-btn">Оставить заявку</button>
+      <div class="offer-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="offer">
+                <h1 class="offer__title">Производство изделий<br>из композитных материалов</h1>
+                <div class="offer__description">
+                  Собственное современное производство полного цикла<br>
+                  Изделия любой сложности для всевозможных отраслей
+                </div>
+                <div class="offer__submit">
+                  <button data-fancybox data-src="#modal" href="javascript:;" class="offer__submit-btn">Оставить заявку</button>
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +151,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
           </div>
         </div>
-        <!-- <div class="row"> -->
         <div class="col-lg-6">
           <div id="accordion" class="applaying__accordian">
             <h3 class="wow fadeInUp" data-wow-delay="0.25s"><span class="accordion__icon"><i class="fas fa-home"></i></span>ЖКХ и благоустройство</h3>
@@ -143,7 +172,6 @@
             </div>
           </div>
         </div>
-        <!-- </div> -->
       </div>
     </div>
   </section>
@@ -161,7 +189,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="advantages__items">
             <div class="advantages__item wow fadeInUp" data-wow-delay="0.25s" style="background-image: url(img/icons/advantages-icon-1.svg)">
               <h4 class="advantages__item-title wow fadeInUp">Производство</h4>
@@ -171,7 +199,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="advantages__items">
             <div class="advantages__item wow fadeInUp"  data-wow-delay="0.5s" style="background-image: url(img/icons/advantages-icon-2.svg)">
               <h4 class="advantages__item-title wow fadeInUp">Технологии</h4>
@@ -181,7 +209,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="advantages__items">
             <div class="advantages__item wow fadeInUp"  data-wow-delay="0.75s" style="background-image: url(img/icons/advantages-icon-3.svg)">
               <h4 class="advantages__item-title wow fadeInUp">Качество</h4>
@@ -191,7 +219,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="advantages__items">
             <div class="advantages__item wow fadeInUp"  data-wow-delay="1s" style="background-image: url(img/icons/advantages-icon-4.svg)">
               <h4 class="advantages__item-title wow fadeInUp" data-wow-offset="150">Гарантия</h4>
@@ -274,66 +302,75 @@
   </section>
 
   <footer class="footer" id="footer">
-    <!-- <div class="footer__overlay">
-
-    </div> -->
-    <div class="footer__wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-2 col-lg-2">
-            <div class="footer__logo">
-              <a class="footer__logo-link" href="#"><img src="img/logo-white.png" alt="ArtJetFly"></a>
-            </div>
-          </div>
-          <div class="col-xl-2 col-lg-2">
-            <div class="footer__nav-products">
-              <ul class="footer__nav-menu">
-                <li class="footer__nav-item"><a href="#">Продукция</a></li>
-                <li class="footer__nav-item"><a href="#">Катамараны</a></li>
-                <li class="footer__nav-item"><a href="#">Флайборды</a></li>
-                <li class="footer__nav-item"><a href="#">Лодки</a></li>
-                <li class="footer__nav-item"><a href="#">Обвесы для авто</a></li>
-                <li class="footer__nav-item"><a href="#">Емкости</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-3">
-            <div class="footer__nav-contacts">
-              <ul class="footer__nav-menu">
-                <li class="footer__nav-item"><a href="#">Контакты</a></li>
-                <li class="footer__nav-item"><a href="#">Украина, г. Кропивницкий, ул. Серова, 25</a></li>
-                <li class="footer__nav-item"><a href="#">+38 (066) 021-19-98</a></li>
-                <li class="footer__nav-item"><a href="#">+38 (066) 276-75-56 </a></li>
-                <li class="footer__nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xl-4 col-lg-5">
-            <div class="footer__form">
-              <form action="" class="form">
-                <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
-                <label class="footer__form-subtitle" for="">Наш технический специалист свяжется с Вами и проконсультирует <span>бесплатно!</span></label>
-                <label class="footer__form-name" for="name">Ваше имя:</label>
-                <input type="name" placeholder="Введите Ваше имя" required>
-                <label class="footer__form-email" for="email">Ваш E-mail</label>
-                <input type="email" placeholder="Введите Ваш E-mail" required>
-                <label class="footer__form-message" for="message">Ваше сообщение</label>
-                <textarea type="textarea" rows="2" placeholder="Введите Ваше сообщение" required></textarea>                
-                <button class="footer__form-btn" type="submit">Отправить сообщение</button>
-              </form>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-2">
+          <div class="footer__logo">
+            <a class="footer__logo-link" href="#"><img src="img/logo-white.png" alt="ArtJetFly"></a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="copyright">
-              <p class="artjetfly">ArtJetFly, 2019 © Все права защищены</p>  |  <p class="freestyle">Разработка: <span class="freestyle__link"><a href="https://freestyleweb.github.io">Freestyle Web Studio</a></span></p>
-            </div>
+        <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+          <div class="footer__nav-products">
+            <ul class="footer__nav-menu">
+              <li class="footer__nav-item"><a href="#">Продукция</a></li>
+              <li class="footer__nav-item"><a href="#">Катамараны</a></li>
+              <li class="footer__nav-item"><a href="#">Флайборды</a></li>
+              <li class="footer__nav-item"><a href="#">Лодки</a></li>
+              <li class="footer__nav-item"><a href="#">Обвесы для авто</a></li>
+              <li class="footer__nav-item"><a href="#">Емкости</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-3 col-md-4 d-none d-md-block">
+          <div class="footer__nav-contacts">
+            <ul class="footer__nav-menu">
+              <li class="footer__nav-item"><a href="#">Контакты</a></li>
+              <li class="footer__nav-item"><a href="#">Украина, г. Кропивницкий, ул. Серова, 25</a></li>
+              <li class="footer__nav-item"><a href="#">+38 (066) 021-19-98</a></li>
+              <li class="footer__nav-item"><a href="#">+38 (066) 276-75-56 </a></li>
+              <li class="footer__nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-5">
+          <div class="footer__form">
+            <form action="" class="form">
+              <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
+              <label class="footer__form-subtitle" for="">Наш технический специалист свяжется с Вами и проконсультирует <span>бесплатно!</span></label>
+              <label class="footer__form-name" for="name">Ваше имя:</label>
+              <input type="name" placeholder="Введите Ваше имя" required>
+              <label class="footer__form-email" for="email">Ваш E-mail</label>
+              <input type="email" placeholder="Введите Ваш E-mail" required>
+              <label class="footer__form-message" for="message">Ваше сообщение</label>
+              <textarea type="textarea" rows="2" placeholder="Введите Ваше сообщение" required></textarea>                
+              <button class="footer__form-btn" type="submit">Отправить сообщение</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="copyright">
+            <p class="artjetfly">ArtJetFly, 2019 © Все права защищены.</p>  <p class="freestyle">Разработка: <span class="freestyle__link"><a href="https://freestyleweb.github.io">Freestyle Web Studio</a></span></p>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <div id="modal">
+    <form class="modal__form footer__form">
+      <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
+      <label class="footer__form-subtitle" for="">Наш технический специалист свяжется с Вами и проконсультирует <span>бесплатно!</span></label>
+      <label class="footer__form-name" for="name">Ваше имя:</label>
+      <input type="text" name="name" placeholder="Введите Ваше имя" required>
+      <label class="footer__form-email" for="email">Ваш E-mail</label>
+      <input type="email" name="email" placeholder="Введите Ваш E-mail" required>
+      <label class="footer__form-message" for="message">Ваше сообщение</label>
+      <textarea type="textarea" rows="2" placeholder="Введите Ваше сообщение" required></textarea>                
+      <button class="footer__form-btn" type="submit">Отправить сообщение</button>
+    </form>
+  </div>
 
 
 
@@ -344,11 +381,16 @@
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <!-- <script src="js/mmenu-light.js"></script> -->
   <script src="js/main.js"></script>
 
   <script>
 
     new WOW().init();
+
+    
+
 
   </script>
 

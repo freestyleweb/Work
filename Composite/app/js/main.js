@@ -8,9 +8,15 @@ $('.slider').slick({
   cssEase: 'linear'
 });
 
-$(document).ready(function(){
 
-  
+
+  var btn = $('#button');
+
+ 
+
+
+
+$(document).ready(function(){  
 
   $("#sticker").sticky({topSpacing:0});
 
@@ -20,8 +26,17 @@ $(document).ready(function(){
     infinite: true,
     speed: 500,
     fade: true,
-    arrows : true,
-    cssEase: 'linear'
+    arrows: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    swipe: true, 
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          arrows : false
+       }
+      }]       
   });
 
 
@@ -42,7 +57,6 @@ $(document).ready(function(){
       // }
     }
   });
-
     
   });
 
