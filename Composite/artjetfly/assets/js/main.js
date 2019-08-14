@@ -1,13 +1,13 @@
 //Header__slider
-$('.slider').slick({
-  autoplay: true,
-  dots: false,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  arrows : false,
-  cssEase: 'linear'
-});
+// $('.slider').slick({
+//   autoplay: true,
+//   dots: false,
+//   infinite: true,
+//   speed: 500,
+//   fade: true,
+//   arrows : false,
+//   cssEase: 'linear'
+// });
 
 
 $(document).ready(function(){

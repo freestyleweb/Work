@@ -35,23 +35,23 @@
           <div class="col-xl-6 col-lg-6 col-md-8 col-sm-8 d-none d-sm-block">
             <div class="header__phone">
               <div class="phone">
-                <a href="tel:+380660211998"><span><i class="fas fa-phone"></i></span>+38 (066) 021-19-98</a>
+                <a href="tel:<?php the_field('phone-one') ?>"><span><i class="fas fa-phone"></i></span><?php the_field('phone-one') ?></a>
               </div>
               <div class="phone">
-                <a href="tel:+380662767556"><span><i class="fas fa-phone"></i></span>+38 (066) 276-75-56 </a>
+                <a href="tel:<?php the_field('phone-two') ?>"><span><i class="fas fa-phone"></i></span><?php the_field('phone-two') ?></a>
               </div>
             </div>
           </div>
           <div class="col-xl-4 col-lg-4 d-none d-lg-block">
             <div class="header__location">
-              <a href="#"><span><i class="fas fa-map-marker-alt"></i></span>Украина, г. Кропивницкий, ул. Серова, 25</a>
+              <a href="#map"><span><i class="fas fa-map-marker-alt"></i></span><?php the_field('header__location') ?></a>
             </div>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 d-none d-sm-block">
             <div class="header__social">
-              <a href="#"><span><i class="fab fa-facebook-f"></i></span></a>
-              <a href="#"><span></span><i class="fab fa-instagram"></i></span></a>
-              <a href="#"><span></span><i class="fab fa-youtube"></i></span></a>
+              <a href="<?php the_field('header__social-fb') ?>" target="_blank"><span><i class="fab fa-facebook-f"></i></span></a>
+              <a href="<?php the_field('header__social-inst') ?>" target="_blank"><span></span><i class="fab fa-instagram"></i></span></a>
+              <a href="<?php the_field('header__social-youtube') ?>" target="_blank"><span></span><i class="fab fa-youtube"></i></span></a>
             </div>
           </div>
           <div class="col-xl-1 col-lg-1 col-md-2 col-sm-2 col-12">
@@ -68,7 +68,7 @@
         <div class="container" style="position: relative">
           <div class="row">
             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
-              <a class="header__logo" href="#"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/logo-blue.png" alt="ArtJetFly"></a>
+              <a class="header__logo" href="/"><img src="<?php the_field('header__logo') ?>" alt="ArtJetFly"></a>
             </div>
             <!-- <button class="header__nav-btn">
               <i class="fas fa-bars"></i>
@@ -102,7 +102,9 @@
 
     <div class="header__slider">
       <div class="slider">
-        <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-1.jpg)">
+        <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
+        
+        <!-- <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-1.jpg)">
 
         </div>
         <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-2.jpg)">
@@ -110,7 +112,7 @@
         </div>
         <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-3.jpg)">
 
-        </div>
+        </div> -->
       </div>
       <div class="offer-wrapper">
         <div class="container">
