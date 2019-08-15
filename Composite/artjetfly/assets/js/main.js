@@ -57,6 +57,7 @@ $(document).ready(function(){
   
 
   //gallery
+  
   $('.products__gallery').magnificPopup({
     delegate: 'a',
     type: 'image',

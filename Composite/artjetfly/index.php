@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+<!-- data-wow-offset="150" -->
 
 
 <main>
@@ -9,32 +9,28 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title wow fadeInUp" data-wow-delay="0.25s">
-							<h2>Сферы применения композитных материалов</h2>
+							<h3><?php the_field('applying-section__title') ?></h3>
 						</div>
 						<div class="section__description wow fadeInUp" data-wow-delay="0.75s">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+							<?php the_field('applying-section__description') ?>
 						</div>
 					</div>
 					<div class="col-lg-6">
+
 						<div id="accordion" class="applaying__accordian">
-							<h3 class="wow fadeInUp" data-wow-delay="0.25s"><span class="accordion__icon"><i class="fas fa-home"></i></span>ЖКХ и благоустройство</h3>
-							<div>Производство остановочных комплексов, декоративных цоколей силовых опор.
-								Малые архитектурные формы, павильоны, лавочки, вазоны, урны, таксофоны и многое-многое другое.
-							</div>
-							<h3 class="wow fadeInUp" data-wow-delay="0.5s"><span class="accordion__icon"><i class="fas fa-ship"></i></span>Легкий водный транспорт</h3>
-							<div>Корпусные детали водного транспорта, декоративные панели и панели управления,
-								корпусные элементы, защитные кожухи подвижных частей,
-								нестандартные изделия на заказ
-							</div>
-							<h3 class="wow fadeInUp" data-wow-delay="0.75s"><span class="accordion__icon"><i class="fas fa-industry"></i></span>Промышленность</h3>
-							<div>Емкости различных форм и назначения, газо- и воздуховоды, капле- и брызгоулавливатели,
-								защитные кожухи, выхлопные трубы, вытяжные вентиляции и нестандартное оборудование на заказ
-							</div>
-							<h3 class="wow fadeInUp" data-wow-delay="1s"><span class="accordion__icon"><i class="fas fa-car"></i></span>Машиностроение</h3>
-							<div>Корпусные детали машин, декоративные панели и панели управления, кузовные элементы,
-								защитные кожухи подвижных частей машин, нестандартные изделия на заказ.
-							</div>
+							<h4 class="wow fadeInUp" data-wow-delay="0.25s"><span class="accordion__icon"><i class="fas fa-home"></i></span><?php the_field('ui-accordion-header-1') ?></h4>
+							<div><?php the_field('ui-accordion-content-1') ?></div>
+							
+							<h4 class="wow fadeInUp" data-wow-delay="0.5s"><span class="accordion__icon"><i class="fas fa-ship"></i></span><?php the_field('ui-accordion-header-2') ?></h4>
+							<div><?php the_field('ui-accordion-content-2') ?></div>
+							
+							<h4 class="wow fadeInUp" data-wow-delay="0.75s"><span class="accordion__icon"><i class="fas fa-industry"></i></span><?php the_field('ui-accordion-header-3') ?></h4>
+							<div><?php the_field('ui-accordion-content-3') ?></div>
+							
+							<h4 class="wow fadeInUp" data-wow-delay="1s"><span class="accordion__icon"><i class="fas fa-car"></i></span><?php the_field('ui-accordion-header-4') ?></h4>
+							<div><?php the_field('ui-accordion-content-4') ?></div>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -45,54 +41,59 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title wow fadeInUp" data-wow-delay="0.25s">
-							<h2>Наши преимущества</h2>
+							<h3><?php the_field('advantages-section__title') ?></h3>
 						</div>
 						<div class="section__description wow fadeInUp" data-wow-delay="0.75s">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+							<?php the_field('advantages-section__description') ?>
 						</div>
 					</div>
 				</div>
 				<div class="row">
+
 					<div class="col-xl-3 col-lg-3 col-md-6">
 						<div class="advantages__items">
-							<div class="advantages__item wow fadeInUp" data-wow-delay="0.25s" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/icons/advantages-icon-1.svg)">
-								<h4 class="advantages__item-title wow fadeInUp">Производство</h4>
-								<p class="advantages__item-description wow fadeInUp">
-									Собственное современное производство полного цикла
-								</p>
+								<div class="advantages__item wow fadeInUp" data-wow-delay="0.25s" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/icons/advantages-icon-1.svg)">
+									<h5 class="advantages__item-title wow fadeInUp"><?php the_field('advantages-title-1') ?></h5>
+									<div class="advantages__item-description wow fadeInUp">
+										<?php the_field('advantages-description-1') ?>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+					
 					<div class="col-xl-3 col-lg-3 col-md-6">
 						<div class="advantages__items">
 							<div class="advantages__item wow fadeInUp"  data-wow-delay="0.5s" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/icons/advantages-icon-2.svg)">
-								<h4 class="advantages__item-title wow fadeInUp">Технологии</h4>
-								<p class="advantages__item-description wow fadeInUp">
-									Уникальные технологии изготовления
-								</p>
+								<h5 class="advantages__item-title wow fadeInUp"><?php the_field('advantages-title-2') ?></h5>
+								<div class="advantages__item-description wow fadeInUp">
+									<?php the_field('advantages-description-2') ?>
+								</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="col-xl-3 col-lg-3 col-md-6">
 						<div class="advantages__items">
 							<div class="advantages__item wow fadeInUp"  data-wow-delay="0.75s" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/icons/advantages-icon-3.svg)">
-								<h4 class="advantages__item-title wow fadeInUp">Качество</h4>
-								<p class="advantages__item-description wow fadeInUp">
-									Многоступенчатый <br>контроль качества
-								</p>
+								<h5 class="advantages__item-title wow fadeInUp"><?php the_field('advantages-title-3') ?></h5>
+								<div class="advantages__item-description wow fadeInUp">
+									<?php the_field('advantages-description-3') ?>
+								</div>
 							</div>
 						</div>
 					</div>
+
 					<div class="col-xl-3 col-lg-3 col-md-6">
 						<div class="advantages__items">
 							<div class="advantages__item wow fadeInUp"  data-wow-delay="1s" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/icons/advantages-icon-4.svg)">
-								<h4 class="advantages__item-title wow fadeInUp" data-wow-offset="150">Гарантия</h4>
-								<p class="advantages__item-description wow fadeInUp" data-wow-offset="150">
-									Полная гарантия на всю <br>продукцию до 30 лет
-								</p>
+								<h5 class="advantages__item-title wow fadeInUp" data-wow-offset="150"><?php the_field('advantages-title-4') ?></h5>
+								<div class="advantages__item-description wow fadeInUp">
+									<?php the_field('advantages-description-4') ?>
+								</div>
 							</div>
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</section>
@@ -102,7 +103,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title wow fadeInUp"  class="wow fadeInUp" data-wow-delay="0.25s">
-							<h2>Наша продукция</h2>
+							<h3>Наша продукция</h3>
 						</div>
 						<div class="section__description wow fadeInUp" class="wow fadeInUp" data-wow-delay="0.5s">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
@@ -110,8 +111,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="container">
+			<div class="container">	
 				<div class="products__gallery">
+				<?php the_field('products__gallery-item') ?>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-2.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-2.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-3.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-3.jpg" alt="catamaran"></a>
@@ -130,7 +132,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section__title wow fadeInUp" data-wow-delay="0.25s">
-							<h2>Наше видео</h2>
+							<h3>Наше видео</h3>
 						</div>
 						<div class="section__description wow fadeInUp" data-wow-delay="0.5s">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>

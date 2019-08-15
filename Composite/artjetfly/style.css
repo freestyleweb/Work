@@ -7976,7 +7976,7 @@ section {
 }
 
 .section__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     color: #585D62;
     text-align: center
@@ -8172,7 +8172,8 @@ section {
 }
 
 .header__slider {
-    position: relative
+    /* position: relative */
+    height: 96vh
 }
 
 .header__slider .slider {
@@ -8187,29 +8188,31 @@ section {
     background-color: #009EE0
 }
 
-.header__slider .slick-initialized .slick-slide {
+/* .header__slider .slick-initialized .slick-slide {
     height: 96vh
-}
+} */
 
 .header__slider .offer-wrapper {
     position: absolute;
     height: auto;
     width: 100%;
-    top: 0;
+    top: 50%;
     left: 0;
-    padding-top: 160px
+    transform: translateY(-50%);
 }
 
 .header__slider .offer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    width: 100%
+    width: 100%;
+
+
 }
 
 .header__slider .offer__title {
-    display: flex;
-    justify-content: flex-end;
+    /* display: flex;
+    justify-content: flex-end; */
     text-align: right;
     font-size: 2.75rem;
     font-weight: 900;
@@ -8285,7 +8288,7 @@ section {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
 }
 
 .advantages__item-title {
@@ -8316,16 +8319,16 @@ section {
 }
 
 .products__gallery-item img {
-    --moz-transition: all 1s ease-out;
-    --o-transition: all 1s ease-out;
-    --webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
     max-height: 410px
 }
 
 .products__gallery-item img:hover {
-    --webkit-transform: scale(1.2);
-    --moz-transform: scale(1.2);
-    --o-transform: scale(1.2)
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2)
 }
 
 .video .slick-initialized .slick-slide {

@@ -28,6 +28,6 @@ function artjetfly_scripts() {
 	wp_enqueue_script( 'fancybox-script', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array('jquery'), 'null', true );
 	wp_enqueue_script( 'wow-script', get_template_directory_uri() . '/assets/js/wow.min.js', array('jquery'), 'null', true );
 
-	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), 'null', true );
+	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js' );
 
 }

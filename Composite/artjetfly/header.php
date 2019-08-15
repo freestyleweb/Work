@@ -103,34 +103,29 @@
     <div class="header__slider">
       <div class="slider">
         <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
-        
-        <!-- <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-1.jpg)">
-
-        </div>
-        <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-2.jpg)">
-
-        </div>
-        <div class="slider__item" style="background-image: url(<?php bloginfo( 'template_url' ); ?>/assets/img/bg-3.jpg)">
-
-        </div> -->
-      </div>
-      <div class="offer-wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="offer">
-                <h1 class="offer__title">Производство изделий<br>из композитных материалов</h1>
-                <div class="offer__description">
-                  Собственное современное производство полного цикла<br>
-                  Изделия любой сложности для всевозможных отраслей
-                </div>
-                <div class="offer__submit">
-                  <button data-fancybox data-src="#modal" href="javascript:;" class="offer__submit-btn">Оставить заявку</button>
+        <!-- <?php echo do_shortcode('[metaslider title="New Slideshow"]'); ?> -->
+        <div class="offer-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="offset-xl-4 col-xl-8">
+                <div class="offer">
+                  <h1 class="offer__title">
+                    <div><?php the_field('offer__title-1') ?></div>
+                    <div><?php the_field('offer__title-2') ?></div>                  
+                  </h1>
+                  <div class="offer__description">
+                    <div><?php the_field('offer__description-1') ?></div>
+                    <div><?php the_field('offer__description-2') ?></div> 
+                  </div>
+                  <div class="offer__submit">
+                    <button data-fancybox data-src="#modal" href="javascript:;" class="offer__submit-btn">Оставить заявку</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
   </header>
