@@ -98,6 +98,8 @@
 			</div>
 		</section>
 
+		
+
 		<section class="products" id="products">
 			<div class="container">
 				<div class="row">
@@ -114,7 +116,8 @@
 			<div class="container">	
 				<div class="products__gallery">
 				<?php the_field('products__gallery-item') ?>
-					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" alt="catamaran"></a>
+				<?php echo do_shortcode('[Best_Wordpress_Gallery id="2" gal_title="ProdGal"]'); ?>
+					<!-- <a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-1.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-2.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-2.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-3.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-3.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-4.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-4.jpg" alt="catamaran"></a>
@@ -122,7 +125,7 @@
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-6.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-6.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-7.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-7.jpg" alt="catamaran"></a>
 					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-8.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-8.jpg" alt="catamaran"></a>
-					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-9.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-9.jpg" alt="catamaran"></a>
+					<a href="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-9.jpg" class="products__gallery-item wow fadeInUp" data-wow-delay="0.25s"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/gallery/img-9.jpg" alt="catamaran"></a> -->
 				</div>
 			</div>
 		</section>

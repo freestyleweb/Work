@@ -99,7 +99,7 @@
           </div>
         </div>
       </nav>
-
+      
     <div class="header__slider">
       <div class="slider">
         <?php echo do_shortcode('[smartslider3 slider=2]'); ?>

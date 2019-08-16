@@ -7877,7 +7877,7 @@ section {
     margin-top: 80px
 }
 
-.preloader {
+/* .preloader {
     position: fixed;
     left: 0;
     top: 0;
@@ -7916,7 +7916,7 @@ section {
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
-}
+} */
 
 #modal {
     padding: 5px;
@@ -8311,6 +8311,70 @@ section {
     flex-wrap: wrap;
     transition: all .5s
 }
+
+#bwg_container1_0 #bwg_container2_0 .bwg-container-0.bwg-standard-thumbnails .bwg-item > a {
+    margin: 0 !important;
+}
+
+.bwg-item {
+   overflow: hidden 
+}
+
+
+.bwg-item a {
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    max-height: 410px
+}
+
+.bwg-item a:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2)
+}
+
+.mg-threecol ul li {
+    margin-right: 0 !important;
+    padding: 0 !important;
+}
+
+.mg-image-tiles .mg-thumbs.mg-fivecol ul li {
+    width: 370px !important;
+    height: 410px;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* .ngg-galleryoverview.default-view, .ngg-simplelightbox {
+    margin: 0;
+    padding: 0;
+}
+
+.ngg-galleryoverview.default-view .ngg-gallery-thumbnail a {
+    margin: 0 !important;
+}
+
+.ngg-simplelightbox {
+    overflow: hidden
+}
+
+.ngg-simplelightbox img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    -webkit-transition: all 1s ease-out;
+    max-height: 410px
+}
+
+.ngg-simplelightbox img:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2)
+} */
 
 .products__gallery-item {
     width: 370px;
