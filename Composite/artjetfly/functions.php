@@ -31,3 +31,13 @@ function artjetfly_scripts() {
 	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/assets/js/main.js' );
 
 }
+
+
+function root_acf_format_value( $value, $post_id, $field ) {
+	
+	$value = do_shortcode($value);
+	
+	return $value;
+}
+
+add_filter('acf/format_value/type=textarea', 'root_acf_format_value', 10, 3);

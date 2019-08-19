@@ -101,31 +101,30 @@
       </nav>
       
     <div class="header__slider">
-      <div class="slider">
-        <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
-        <!-- <?php echo do_shortcode('[metaslider title="New Slideshow"]'); ?> -->
-        <div class="offer-wrapper">
-          <div class="container">
-            <div class="row">
-              <div class="offset-xl-4 col-xl-8">
-                <div class="offer">
-                  <h1 class="offer__title">
-                    <div><?php the_field('offer__title-1') ?></div>
-                    <div><?php the_field('offer__title-2') ?></div>                  
-                  </h1>
-                  <div class="offer__description">
-                    <div><?php the_field('offer__description-1') ?></div>
-                    <div><?php the_field('offer__description-2') ?></div> 
-                  </div>
-                  <div class="offer__submit">
-                    <button data-fancybox data-src="#modal" href="javascript:;" class="offer__submit-btn">Оставить заявку</button>
-                  </div>
+      <div class="offer-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="offset-xl-4 col-xl-8">
+              <div class="offer">
+                <h1 class="offer__title">
+                  <div><?php the_field('offer__title-1') ?></div>
+                  <div><?php the_field('offer__title-2') ?></div>                  
+                </h1>
+                <div class="offer__description">
+                  <div><?php the_field('offer__description-1') ?></div>
+                  <div><?php the_field('offer__description-2') ?></div> 
+                </div>
+                <div class="offer__submit">
+                  <button data-fancybox data-src="#modal" href="javascript:;" class="offer__submit-btn">Оставить заявку</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+      <div class="slider">
+        <?php echo do_shortcode('[smartslider3 slider=2]'); ?>
+        <!-- <?php echo do_shortcode('[metaslider title="New Slideshow"]'); ?> -->
+      </div>
     </div>
   </header>

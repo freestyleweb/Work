@@ -3,29 +3,29 @@
       <div class="row">
         <div class="col-xl-2 col-lg-2 col-md-2">
           <div class="footer__logo">
-            <a class="footer__logo-link" href="#"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/logo-white.png" alt="ArtJetFly"></a>
+            <a class="footer__logo-link" href="/"><img src="<?php the_field('footer__logo') ?>" alt="ArtJetFly"></a>
           </div>
         </div>
         <div class="col-xl-2 col-lg-2 d-none d-lg-block">
           <div class="footer__nav-products">
-            <ul class="footer__nav-menu">
-              <li class="footer__nav-item"><a href="#">Продукция</a></li>
-              <li class="footer__nav-item"><a href="#">Катамараны</a></li>
-              <li class="footer__nav-item"><a href="#">Флайборды</a></li>
-              <li class="footer__nav-item"><a href="#">Лодки</a></li>
-              <li class="footer__nav-item"><a href="#">Обвесы для авто</a></li>
-              <li class="footer__nav-item"><a href="#">Емкости</a></li>
+            <ul class="footer__nav-menu">            
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item') ?></a></li>
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item-1') ?></a></li>
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item-2') ?></a></li>
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item-3') ?></a></li>
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item-4') ?></a></li>
+              <li class="footer__nav-item"><a href="#products"><?php the_field('footer__nav-item-5') ?></a></li>
             </ul>
           </div>
         </div>
         <div class="col-xl-4 col-lg-3 col-md-4 d-none d-md-block">
           <div class="footer__nav-contacts">
             <ul class="footer__nav-menu">
-              <li class="footer__nav-item"><a href="#">Контакты</a></li>
-              <li class="footer__nav-item"><a href="#">Украина, г. Кропивницкий, ул. Серова, 25</a></li>
-              <li class="footer__nav-item"><a href="#">+38 (066) 021-19-98</a></li>
-              <li class="footer__nav-item"><a href="#">+38 (066) 276-75-56 </a></li>
-              <li class="footer__nav-item"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></li>
+              <li class="footer__nav-item"><a href="#footer"><?php the_field('footer__nav-contacts') ?></a></li>
+              <li class="footer__nav-item"><a href="#footer"><?php the_field('footer__nav-locate') ?></a></li>
+              <li class="footer__nav-item"><a href="tel:<?php the_field('footer__phone-one') ?>"><?php the_field('footer__phone-one') ?></a></li>
+              <li class="footer__nav-item"><a href="tel:<?php the_field('footer__phone-two') ?>"><?php the_field('footer__phone-two') ?></a></li>
+              <li class="footer__nav-item"><a href="<?php the_field('footer__social-fb') ?>"><i class="fab fa-facebook-f"></i></a><a href="<?php the_field('footer__social-inst') ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('footer__social-youtube') ?>"><i class="fab fa-youtube"></i></a></li>
             </ul>
           </div>
         </div>
