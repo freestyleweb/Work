@@ -34,6 +34,9 @@ $(document).ready(function(){
   //sticky menu
   $("#sticker").sticky({topSpacing:0});
 
+  //sticky menu
+  $("#custom_menu_icon").sticky({topSpacing:0});
+
  
   //video slider
   $('.video__slider').slick({

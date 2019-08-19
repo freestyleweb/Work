@@ -101,6 +101,7 @@
 		
 
 		<section class="products" id="products">
+
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -113,11 +114,17 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="container">	
-				<div class="products__gallery">
-					<?php echo do_shortcode('[Best_Wordpress_Gallery id="2" gal_title="ProdGal"]'); ?>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="products__gallery">
+							<?php echo do_shortcode('[Best_Wordpress_Gallery id="2" gal_title="ProdGal"]'); ?>
+						</div>
+					</div>
 				</div>
 			</div>
+
 		</section>
 
 		<section class="video">
@@ -157,7 +164,8 @@
 
 	<div id="modal">
     <form class="modal__form footer__form">
-      <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
+			<?php echo do_shortcode('[contact-form-7 id="225" title="modal__form"]'); ?>		
+      <!-- <label class="footer__form-title" for="">Готовы обсудить Ваш проект?</label>
       <label class="footer__form-subtitle" for="">Наш технический специалист свяжется с Вами и проконсультирует <span>бесплатно!</span></label>
       <label class="footer__form-name" for="name">Ваше имя:</label>
       <input type="text" name="name" placeholder="Введите Ваше имя" required>
@@ -165,7 +173,7 @@
       <input type="email" name="email" placeholder="Введите Ваш E-mail" required>
       <label class="footer__form-message" for="message">Ваше сообщение</label>
       <textarea type="textarea" rows="2" placeholder="Введите Ваше сообщение" required></textarea>                
-      <button class="footer__form-btn" type="submit">Отправить сообщение</button>
+      <button class="footer__form-btn" type="submit">Отправить сообщение</button> -->
     </form>
   </div>
 

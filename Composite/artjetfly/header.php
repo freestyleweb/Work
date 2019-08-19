@@ -64,41 +64,56 @@
     </div>
    
      
-      <nav class="header__nav" id="sticker">
-        <div class="container" style="position: relative">
-          <div class="row">
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
-              <a class="header__logo" href="/"><img src="<?php the_field('header__logo') ?>" alt="ArtJetFly"></a>
-            </div>
-            <!-- <button class="header__nav-btn">
-              <i class="fas fa-bars"></i>
-            </button> -->
-            <div class="col-xl-5 col-lg-7 col-md-6 d-sm-none d-none d-md-block align-items-center align-items-center">
+    <nav class="header__nav" id="sticker">
+      <div class="container" style="position: relative">
+        <div class="row">
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-4 d-flex align-items-center">
+            <a class="header__logo" href="/"><img src="<?php the_field('header__logo') ?>" alt="ArtJetFly"></a>
+          </div>
+          <!-- <button class="header__nav-btn">
+            <i class="fas fa-bars"></i>
+          </button> -->
+          <div class="col-xl-7 col-lg-7 col-md-6 d-sm-none d-none d-md-block align-items-center align-items-center">
+            <div class="header__menu">
+
+            <?php 
+              wp_nav_menu( array(
+                'menu_class'=>'header__menu-items',
+                'theme_location'=>'top'
+              ) );
+            ?>
               
-              <div id="sticker" class="header__menu">
-                <ul class="header__menu-items">
-                  <li class="header__menu-item"><a href="#applying">Применение</a></li>
-                  <li class="header__menu-item"><a href="#advantages">Преимущества</a></li>
-                  <li class="header__menu-item"><a href="#products">Продукция</a></li>
-                  <li class="header__menu-item"><a href="#footer">Контакты</a></li>
-                </ul>
-              </div>
+              <!-- <ul class="header__menu-items">
+                <li class="header__menu-item"><a href="#applying">Применение</a></li>
+                <li class="header__menu-item"><a href="#advantages">Преимущества</a></li>
+                <li class="header__menu-item"><a href="#products">Продукция</a></li>
+                <li class="header__menu-item"><a href="#footer">Контакты</a></li>
+              </ul> -->
             </div>
-            <div class="col-xl-3 offset-lg-2 col-lg-3 col-md-4 col-sm-7 col-6 d-flex align-items-center">
-              <div class="header__callback">
-                <button data-fancybox data-src="#modal" href="javascript:;" class="header__callback-btn">Напишите нам</button>
-              </div>
-            </div>
-            <!-- <div class="col-2">
-              <div class="hamburger hamburger--squeeze js-hamburger">
-                <div class="hamburger-box">
-                  <div class="hamburger-inner"></div>
-                </div>
-              </div>
+            <!-- <div class="menu__mobile">
+              <ul class="menu__mobile-items">
+                <li class="menu__mobile-item"><a href="#applying">Применение</a></li>
+                <li class="menu__mobile-item"><a href="#advantages">Преимущества</a></li>
+                <li class="menu__mobile-item"><a href="#products">Продукция</a></li>
+                <li class="menu__mobile-item"><a href="#footer">Контакты</a></li>
+              </ul>
             </div> -->
           </div>
+          <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7 col-6 d-flex align-items-center">
+            <div class="header__callback">
+              <button data-fancybox data-src="#modal" href="javascript:;" class="header__callback-btn">Напишите нам</button>
+            </div>
+          </div>
+          <!-- <div class="col-2">
+            <div class="hamburger hamburger--squeeze js-hamburger">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div> -->
         </div>
-      </nav>
+      </div>
+    </nav>
       
     <div class="header__slider">
       <div class="offer-wrapper">

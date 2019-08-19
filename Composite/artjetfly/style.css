@@ -392,6 +392,11 @@ html {
     }
 }
 
+#responsive-menu-button {
+    z-index: 999999;
+}
+    
+
 .container-fluid {
     width: 100%;
     padding-right: 15px;
@@ -7996,7 +8001,9 @@ section {
 }
 
 .header__top {
-    background-color: #009EE0
+    background-color: #009EE0;
+    position: relative;
+    z-index: 9;
 }
 
 .header__top .header__phone {
@@ -8103,30 +8110,30 @@ section {
     line-height: 80px
 }
 
-.header__nav .header__menu-items {
+.header__menu-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     line-height: 5rem;
     list-style: none;
     margin: 0;
     padding: 0
 }
 
-.header__nav .header__menu-items .header__menu-item {
+.menu-item {
     text-transform: uppercase;
     cursor: pointer
 }
 
-.header__nav .header__menu-items .header__menu-item a {
+.menu-item a {
     color: #585D62;
     text-decoration: none;
     font-weight: 700;
     padding: 40px 0
 }
 
-.header__nav .header__menu-items .header__menu-item:hover a,
-.header__nav .header__menu-items .header__menu-item:focus a,
-.header__nav .header__menu-items .header__menu-item:active a {
+.menu-item:hover a,
+.menu-item:focus a,
+.menu-item:active a {
     color: #009EE0;
     transition: all .25s ease
 }
