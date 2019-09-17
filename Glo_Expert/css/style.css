@@ -58,6 +58,11 @@ h1, h2, h3, h4, h5, h6 {
 	color: #424652;
 }
 
+.text__marker {
+	color: #EB6302;
+	font-weight: 300;
+}
+
 section {
 	padding: 50px 0;
 }
@@ -228,6 +233,10 @@ a img {
 	padding-top: 80px;
 }
 
+.comfort .main__offer-btn {
+	box-shadow: none;
+}
+
 .section__img img {
 	width: 100%;
 }
@@ -326,10 +335,6 @@ a img {
 	margin-top: 55px;
 }
 
-.using__item-icon img {
-
-}
-
 .using__item-title {
 	margin: 5px 0;
 	font-size: 20px;
@@ -344,4 +349,238 @@ a img {
 
 .using__item-description .glo {
 	color: #444652;
+}
+
+/* ========== Section Sales ========== */
+
+.sales__item {
+	margin-top: 50px;
+}
+
+.sales__product-image {
+	text-align: center;
+}
+
+.sales__description .section__subtitle {
+	margin-bottom: 10px;
+}
+
+.sales__text {
+	font-size: 16px;
+	line-height: 1.75;
+}
+
+.sales__text-title {
+	font-weight: 700;
+}
+
+.sales__price-old {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 1.5;
+	text-decoration-line: line-through;
+}
+
+.sales__price-new {
+	display: inline-block;
+	color: #EB6302;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 1.5;
+	margin-right: 15px;
+}
+
+.sales__text .btn {
+	margin-top: 20px;
+}
+
+.sales-glo {
+	font-weight: 700;
+}
+
+/* ========== Section Test ========== */
+
+.test {
+	background-color: #ebebeb;
+	padding: 65px 0;
+}
+
+.section__test-subtitle {
+	line-height: 1.75;
+}
+
+.section__test-text {
+	font-size: 20px;
+	line-height: 1.75;
+}
+
+.test-btn {
+	margin-top: 40px;
+}
+
+.test__image-block {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* ========== Section Feedback ========== */
+
+.feedback__title {
+	text-transform: none;
+}
+
+.feedback__subtitle {
+	text-transform: none;
+	text-align: center;
+}
+
+label {
+	display: block;
+	text-align: left;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.feedback__form {
+	max-width: 400px;
+	padding: 40px 40px;
+	background-color: #fff;
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feedback__form-title {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	color: #f37935;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.feedback__form-subtitle {
+	font-size: 14px;
+	text-align: center;
+}
+
+.feedback__form-name,
+.feedback__form-email,
+.feedback__form-message {
+	display: flex;
+	flex-direction: column;
+	margin: 5px 0;
+	width: 100%;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.feedback__form input,
+.feedback__form textarea {
+	width: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+	border-bottom: 1px solid #979b9f;
+	font-size: 14px;
+	margin-bottom: 25px;
+	padding: 5px 5px
+}
+
+.feedback__form input::placeholder,
+.feedback__form textarea::placeholder {
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.45)
+}
+
+.feedback__form-btn {
+	width: 100%;
+	background-color: transparent;
+	border: 1px solid #f37935;
+	outline: none;
+	color: #f37935;
+	font-size: 0.875rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	line-height: 2.1875rem;
+	letter-spacing: 0.12rem;
+	cursor: pointer;
+	margin-top: 15px
+}
+
+.feedback__form-btn:hover,
+.feedback__form-btn:focus,
+.feedback__form-btn:active {
+	background-color: #EB6302;
+	color: #ffffff;
+	transition: all .25s
+}
+
+/* ========== Section Footer ========== */
+
+.footer {
+	background-color: #191b1d;
+	padding: 50px 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+
+.footer a {
+	color: #ffffff;
+}
+
+.footer__location {
+	display: flex;
+	max-width: 290px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer__location-icon {
+	margin-right: 10px;
+}
+
+.footer__location-icon img {
+	width: 36px;
+}
+
+.footer__social {
+	display: flex;
+	font-size: 14px;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__social a {
+	width: 32px;
+	height: 32px;
+	background-color: #f37935;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 5px;
+	text-align: center;
+	line-height: 32px;
+	border-radius: 50%;
+}
+
+.footer__social a:hover,
+.footer__social a:focus,
+.footer__social a:active {
+	background-color: #EB6302;
+	transition: all .25s
+}
+
+.footer__copyright-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.footer__logo img {
+	margin-right: 10px;
+	width: 40px;
 }

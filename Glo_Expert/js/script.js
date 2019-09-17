@@ -16,15 +16,15 @@ $(document).ready(function() {
 
 		
 		// sales countdown
-		$('.first-countdown').countdown({
-			date: '09/17/2019 17:30:00'
+		$('.sales-countdown-first').countdown({
+			date: '09/17/2020 17:30:00'
 			});
 
-		$('.second-countdown').countdown({
-			date: '09/17/2019 17:30:00'
+		$('.sales-countdown-second').countdown({
+			date: '09/17/2020 17:30:00'
 			});
 			
-		$('.third-countdown').countdown({
-			date: '09/17/2019 17:30:00'
+		$('.sales-countdown-third').countdown({
+			date: '09/17/2020 17:30:00'
 			});
 });
