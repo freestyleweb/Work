@@ -10,21 +10,22 @@ $(document).ready(function() {
 
 		fixedContentPos: false
 	});
+	
 
-	  //sticky menu
-		$("#sticker").sticky({topSpacing:0});
+	//sticky menu
+	$("#sticker").sticky({topSpacing:0});
 
+	
+	// sales countdown
+	$('.sales-countdown-first').countdown({
+		date: '09/17/2020 17:30:00'
+		});
+
+	$('.sales-countdown-second').countdown({
+		date: '09/17/2020 17:30:00'
+		});
 		
-		// sales countdown
-		$('.sales-countdown-first').countdown({
-			date: '09/17/2020 17:30:00'
-			});
-
-		$('.sales-countdown-second').countdown({
-			date: '09/17/2020 17:30:00'
-			});
-			
-		$('.sales-countdown-third').countdown({
-			date: '09/17/2020 17:30:00'
-			});
+	$('.sales-countdown-third').countdown({
+		date: '09/17/2020 17:30:00'
+		});
 });
