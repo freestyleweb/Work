@@ -15,39 +15,76 @@
 	<title>glo™  - Інноваційна смарт технологія нагрівання тютюну від ВАТ</title>
 </head>
 <body>
+
+	
 	<header class="header" id="sticker">
 
 		<nav class="nav">
 			<div class="container">
 				<div class="row">
 					<div class="header__wrapper">
-					<div class="col-lg-7">
-						<ul class="nav__menu">
-							<li class="nav__menu-item">
-								<a href="" class="nav__menu-link">Про продукт</a>
-							</li>
-							<li class="nav__menu-item">
-								<a href="" class="nav__menu-link">Як користуватися</a>
-							</li>
-							<li class="nav__menu-item">
-								<a href="" class="nav__menu-link">Тест-драйв в Чернівцях</a>
-							</li>
-							<li class="nav__menu-item">
-								<a href="" class="nav__menu-link">Пристрої glo</a>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-2">
-						<div class="nav__logo">
-							<img src="img/logo.svg" alt="glo">
+						<div class="col-lg-7 col-md-1 col-sm-1 col-2">
+							<button class="hamburger-btn">
+								<span class="hamburger-line"></span>
+							</button>
+							<div class="mobile-menu">
+								<ul class="mobile-nav__menu">
+										<li class="mobile-nav__menu-item">
+											<a href="#knowledge" class="nav__menu-link">Про продукт</a>
+										</li>
+										<li class="mobile-nav__menu-item">
+											<a href="#using" class="nav__menu-link">Як користуватися</a>
+										</li>
+										<li class="mobile-nav__menu-item">
+											<a href="#test" class="nav__menu-link">Тест-драйв в Чернівцях</a>
+										</li>
+										<li class="mobile-nav__menu-item">
+											<a href="#sales" class="nav__menu-link">Пристрої glo</a>
+										</li>
+									</ul>
+									<div class="mobile-menu__social">
+										<a href="#" class="mobile-menu__social-link"><i class="fab fa-facebook-f"></i></a>
+										<a href="#" class="mobile-menu__social-link"><i class="fab fa-instagram"></i></a>
+										<a href="#" class="mobile-menu__social-link"><i class="fab fa-telegram-plane"></i></a>
+										<a href="#" class="mobile-menu__social-link"><i class="fab fa-youtube"></i></a>
+									</div>
+									<a data-fancybox data-src="#modal-glo-test" href="javascript:;" class="btn test-btn">Хочу спробувати!</a>
+							</div>
+							<!-- <button href="" class="burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button> -->
+							<ul class="nav__menu">
+								<li class="nav__menu-item">
+									<a href="#knowledge" class="nav__menu-link">Про продукт</a>
+								</li>
+								<li class="nav__menu-item">
+									<a href="#using" class="nav__menu-link">Як користуватися</a>
+								</li>
+								<li class="nav__menu-item">
+									<a href="#test" class="nav__menu-link">Тест-драйв в Чернівцях</a>
+								</li>
+								<li class="nav__menu-item">
+									<a href="#sales" class="nav__menu-link">Пристрої glo</a>
+								</li>
+							</ul>
 						</div>
-					</div>
-					<div class="col-lg-3">
-						<a data-fancybox data-src="#modal" href="javascript:;" class="btn nav__button">Замовити консультацію</a>
+						<div class="col-lg-2 col-md-6 col-sm-5 col-3">
+							<a class="nav__logo" href="/">
+								<img src="img/logo.svg" alt="glo">
+							</a>
+						</div>
+						<div class="col-lg-3 col-md-5 col-sm-6 col-7">
+							<a data-fancybox data-src="#modal-consultation" href="javascript:;" class="btn nav__button">Замовити консультацію</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			</div>
+
+			
+			
+
 		</nav>
 
 	</header>
@@ -55,13 +92,13 @@
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6 col-md-12">
 					<div class="main__offer">
 						<h1 class="main__offer-title">
 							СМАРТ-ТЕХНОЛОГІЯ НАГРІВАННЯ ТЮТЮНУ *
 							<span class="glo">glo™</span>&nbspВІД BRITISH AMERICAN TOBACCO
 						</h1>
-						<a class="btn main__offer-btn" href="#">Переглянути девайси</a>		
+						<a class="btn main__offer-btn" href="#sales">Переглянути девайси</a>		
 						<div class="section__notice">
 							* Це не обов’язково означає, що цей продукт є менш шкідливим, ніж інші тютюнові продукти
 						</div>					
@@ -71,7 +108,7 @@
 		</div>
 	</section>
 
-	<section class="knowledge">
+	<section class="knowledge" id="knowledge">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -81,7 +118,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-lg-7 col-md-12">
 					<div class="section__content">
 						<div class="section__subtitle">
 							НАГРІВАННЯ БЕЗ ГОРІННЯ
@@ -109,7 +146,7 @@
 						</div>						
 					</div>												
 				</div>
-				<div class="col-md-5">
+				<div class="col-lg-5 col-md-12">
 					<div class="section__img">
 						<img src="img/knowledge-bg.png" alt="glo_image">
 					</div>
@@ -123,7 +160,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="video__wrapper">
-						<a class="popup" data-type="iframe" href="https://www.youtube.com/watch?v=_Gp3KntWtWA#action=share">
+						<a class="popup-youtube" data-type="iframe" href="https://www.youtube.com/watch?v=_Gp3KntWtWA#action=share">
 							<img src="img/play-solid.svg" alt="">
 						</a>
 						<p class="hint">Натисніть для перегляду відео</p>
@@ -133,7 +170,7 @@
 		</div>
 	</section>
 
-	<section class="comfort">
+	<section class="comfort" id="comfort">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
@@ -160,7 +197,7 @@
 						<div class="comfort__img">
 							<img src="img/comfort-items.png" alt="comfort-image-glo">
 						</div>
-						<a class="btn main__offer-btn" href="#">Переглянути девайси</a>	
+						<a class="btn main__offer-btn" href="#sales">Переглянути девайси</a>	
 					</div>
 				</div>
 			</div>
@@ -213,14 +250,14 @@
 	<section class="sticks">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-lg-6 col-md-12">
 					<div class="section__wrapper">
 						<div class="section__img">
 							<img src="img/capsules_packs2.png" alt="section-sticks-img">
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 d-flex center-v">
+				<div class="col-lg-6 col-md-12 d-flex center-v">
 					<div class="section__wrapper">
 						<div class="section__title">
 							<span class="neo">neo™</span> – перші в Україні стіки для&nbspнагрівання 
@@ -301,7 +338,7 @@
 		</div>
 	</section>
 
-	<section class="using">
+	<section class="using" id="using">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -398,7 +435,7 @@
 		</div>
 	</section>
 
-	<section class="sales">
+	<section class="sales" id="sales">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -412,7 +449,7 @@
 		<div class="container">
 			<div class="sales__item">
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-lg-6 col-md-5">
 						<div class="sales__product">
 							<div class="sales__product-image">
 								<img src="img/stock-1.png" alt="stock-glo">
@@ -430,7 +467,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-lg-6 col-md-7">
 						<div class="sales__description">
 							<div class="section__subtitle">
 								СТАРТОВИЙ НАБІР <span class="glo text__marker">glo™ series 2.0</span>
@@ -446,13 +483,16 @@
 									- інструкція користувача <strong><span class="sales-glo">glo™</span></strong><br>
 									- 10 пачок стіків для використання з пристроєм <strong><span class="sales-glo">glo™</span></strong><br>
 								</p>
-								<div class="sales__price-new">
-									999 грн
+								<div class="sales__price">
+									<div class="sales__price-new">
+										999 грн
+									</div>
+									<div class="sales__price-old">
+										1929 грн 
+									</div>
 								</div>
-								<div class="sales__price-old">
-									1929 грн 
-								</div>
-								<a href="#" class="btn">Де замовити?</a>
+								
+								<a data-fancybox data-src="#modal-glo-2" href="javascript:;" class="btn">Де замовити?</a>
 							</div>
 						</div>
 					</div>
@@ -495,13 +535,16 @@
 									- інструкція користувача <strong><span class="sales-glo">glo™</span></strong><br>
 									- 10 пачок стіків для використання з пристроєм <strong><span class="sales-glo">glo™</span></strong><br>
 								</p>
-								<div class="sales__price-new">
-									899 грн
+								<div class="sales__price">
+									<div class="sales__price-new">
+										899 грн
+									</div>
+									<div class="sales__price-old">
+										1229 грн 
+									</div>
 								</div>
-								<div class="sales__price-old">
-									1229 грн 
-								</div>
-								<a href="#" class="btn">Де замовити?</a>
+								
+								<a data-fancybox data-src="#modal-glo-mini" href="javascript:;" class="btn">Де замовити?</a>
 							</div>
 						</div>
 					</div>
@@ -552,10 +595,13 @@
 									- щітка для чищення<br>
 									- інструкція користувача <strong><span class="sales-glo">glo™</span></strong><br>
 								</p>
-								<div class="sales__price-new">
-									2999 грн
+								<div class="sales__price">
+									<div class="sales__price-new">
+										2999 грн
+									</div>
 								</div>
-								<a href="#" class="btn">Де замовити?</a>
+								
+								<a data-fancybox data-src="#modal-glo-luxury" href="javascript:;" class="btn">Де замовити?</a>
 							</div>
 						</div>
 					</div>
@@ -564,7 +610,7 @@
 		</div>
 	</section>
 
-	<section class="test">
+	<section class="test" id="test">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
@@ -576,7 +622,7 @@
 						Ваш персональний Glo-expert у зручний для Вас час привезе Ваш пристрій 
 						та надасть детальні відповіді на всі Ваші запитання
 					</div>
-					<a href="#" class="btn test-btn">Хочу спробувати!</a>
+					<a data-fancybox data-src="#modal-glo-test" href="javascript:;" class="btn test-btn">Хочу спробувати!</a>
 				</div>
 				<div class="col-md-6">
 					<div class="test__image-wrapper">
@@ -606,7 +652,7 @@
 					<div class="section__subtitle feedback__subtitle">
 						Зверніться до нас через форму зворотнього зв'язку, і ми Вас проконсультуємо
 					</div>
-					<div class="feedback__form" id="modal">
+					<div class="feedback__form">
 						<form action="" class="form">
 							<label class="feedback__form-title" for="">Задати запитання glo-експерту</label>
 							<label class="feedback__form-name" for="name">Як до Вас звертатися? *</label>
@@ -622,6 +668,77 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="feedback__form" id="modal-consultation">
+		<form action="" class="form">
+			<label class="feedback__form-title" for="">Замовити консультацію</label>
+			<label class="feedback__form-name" for="name">Як до Вас звертатися? *</label>
+			<input type="name" placeholder="Ваше ім’я" required>
+			<label class="feedback__form-phone" for="phone">Ваш номер телефону *</label>
+			<input type="phone" placeholder="Ваш номер телефону" required>
+			<label class="feedback__form-message" for="message">О котрій годині Вам зручно розмовляти? *</label>
+			<input type="text" placeholder="Вкажіть зручний для Вас час" required></input>                
+			<button class="feedback__form-btn" type="submit">Підтвердити</button>
+		</form>
+	</div>
+
+	<div class="feedback__form" id="modal-glo-2">
+		<form action="" class="form">
+			<label class="feedback__form-title" for="">СТАРТОВИЙ НАБІР glo™ series 2.0</label>
+			<label class="feedback__form-name" for="name">Як до Вас звертатися? *</label>
+			<input type="name" placeholder="Ваше ім’я" required>
+			<label class="feedback__form-phone" for="phone">Ваш номер телефону *</label>
+			<input type="phone" placeholder="Ваш номер телефону" required>
+			<label class="feedback__form-message" for="message">Назва вашого населеного пункту *</label>
+			<input type="text" placeholder="Вкажіть Ваш населений пункт" required></input>                
+			<button class="feedback__form-btn" type="submit">Підтвердити</button>
+		</form>
+	</div>
+
+	<div class="feedback__form" id="modal-glo-mini">
+		<form action="" class="form">
+			<label class="feedback__form-title" for="">СТАРТОВИЙ НАБІР glo™ series 2.0 | mini</label>
+			<label class="feedback__form-name" for="name">Як до Вас звертатися? *</label>
+			<input type="name" placeholder="Ваше ім’я" required>
+			<label class="feedback__form-phone" for="phone">Ваш номер телефону *</label>
+			<input type="phone" placeholder="Ваш номер телефону" required>
+			<label class="feedback__form-message" for="message">Назва вашого населеного пункту *</label>
+			<input type="text" placeholder="Вкажіть Ваш населений пункт" required></input>                
+			<button class="feedback__form-btn" type="submit">Підтвердити</button>
+		</form>
+	</div>
+
+	<div class="feedback__form" id="modal-glo-luxury">
+		<form action="" class="form">
+			<label class="feedback__form-title" for="">НАБІР glo™ series 2.0 LUXURY EDITION I</label>
+			<label class="feedback__form-name" for="name">Як до Вас звертатися? *</label>
+			<input type="name" placeholder="Ваше ім’я" required>
+			<label class="feedback__form-phone" for="phone">Ваш номер телефону *</label>
+			<input type="phone" placeholder="Ваш номер телефону" required>
+			<label class="feedback__form-message" for="message">Назва вашого населеного пункту *</label>
+			<input type="text" placeholder="Вкажіть Ваш населений пункт" required></input>                
+			<button class="feedback__form-btn" type="submit">Підтвердити</button>
+		</form>
+	</div>
+
+	<div class="feedback__form" id="modal-glo-test">
+		<form action="" class="form">
+			<label class="feedback__form-title" for="">Заявка на безкоштовний тест драйв - місто Чернівці</label>
+			<label class="feedback__form-name" for="name">П.І.Б. *</label>
+			<input type="name" placeholder="Ваші прізвище, ім’я, по-батькові" required>
+			<label class="feedback__form-phone" for="phone">Ваш номер телефону *</label>
+			<input type="phone" placeholder="Ваш номер телефону" required>
+			<label class="feedback__form-message" for="message">О котрій годині Вам зручно розмовляти? *</label>
+			<input type="text" placeholder="Вкажіть зручний для Вас час" required></input> 
+			<div class="agree">
+				<input class="agree__checker" type="checkbox" name="agree" id="agree" required>
+				<label for="agree">Я розумію, що тест драйв на цьому сайті надається виключно у місті Чернівці і мешкаю у цьому місті</label>
+			</div>
+			<button class="feedback__form-btn" type="submit">Підтвердити</button>
+		</form>
+	</div>
+
+	<a id="button"></a>
 
 	<footer class="footer">
 		<div class="container">
