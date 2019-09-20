@@ -1,18 +1,31 @@
 $(document).ready(function() {
 
-		var hamb_btn = $('.hamburger-btn');
-		var hamb_btn_active = $('.hamburger-btn_active');
-		var mobile_menu = $('.mobile-menu');
-		var nav_link = $('.mobile-menu li');
+	// mobile menu hamburger
+	var hamb_btn = $('.hamburger-btn');
+	var hamb_btn_active = $('.hamburger-btn_active');
+	var mobile_menu = $('.mobile-menu');
+	var nav_link = $('.mobile-nav__menu li a');
+
+	hamb_btn.click(function(){
+		hamb_btn.toggleClass('hamburger-btn_active');
+		mobile_menu.toggleClass('mobile-menu_active')
+	});
+	nav_link.click(function(){
+		hamb_btn.toggleClass('hamburger-btn_active');
+		mobile_menu.toggleClass('mobile-menu_active');		
+	});
+
 	
-		hamb_btn.click(function(){
-			hamb_btn.toggleClass('hamburger-btn_active');
-			mobile_menu.toggleClass('mobile-menu_active');
-		});
-		nav_link.click(function(){
-			hamb_btn.toggleClass('hamburger-btn_active');
-			mobile_menu.toggleClass('mobile-menu_active');
-		});
+	// scroll to section
+	$("a.scrollTo").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 1000);
+    return false;
+	});
+	
 
 	// youtube-video in popup
 	$('.popup-youtube').magnificPopup({
@@ -39,7 +52,7 @@ $(document).ready(function() {
 
   btn.on('click', function(e) {
     e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+    $('html, body').animate({scrollTop:0}, '1000');
   });
 	
 

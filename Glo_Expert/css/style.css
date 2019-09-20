@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-	padding: 50px 0;
+	padding: 100px 0 50px 0;
 }
 
 .section__wrapper {
@@ -110,7 +110,7 @@ section {
 
 #button {
   display: inline-block;
-  background-color: #FF9800;
+  background-color: #F37935;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -135,7 +135,7 @@ section {
 }
 #button:hover {
   cursor: pointer;
-  background-color: #333;
+  background-color: #EB6302;
 }
 #button:active {
   background-color: #555;
@@ -182,10 +182,14 @@ section {
 	color: #EB6302;
 }
 
+.active__link {
+	color: #EB6302;
+}
+
 /* Mobile menu button */
 
 .hamburger-btn {
-    display: flex;
+    display: none;
     align-items: center;
     width: 55px !important;
     height: 50px;
@@ -214,7 +218,7 @@ section {
     display: block;
     width: 18px;
     height: 2px;
-    background-color: #F37935;
+    background-color: #424652;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -477,6 +481,7 @@ a img {
 }
 
 .warning {
+	margin-top: 25px;
 	font-size: 26px;
 	line-height: 36px;
 	text-align: center;
@@ -485,6 +490,7 @@ a img {
 /* ========== Section Progress ========== */
 
 .progress {
+	padding: 75px 0;
 	background-color: #191b1d;
 }
 
@@ -525,9 +531,7 @@ a img {
 
 /* ========== Section Using ========== */
 
-.using {
-	padding: 75px 0;
-}
+
 
 .using__item {
 	text-align: center;	
@@ -566,7 +570,12 @@ a img {
 	text-align: center;
 	min-width: 290px;
 	width: 100%;
-	max-width: 350px;
+	max-width: 290px;
+}
+
+.sales__item:last-child img {
+	min-width: 200px;
+	max-width: 200px;
 }
 
 .sales__description .section__subtitle {
@@ -611,7 +620,6 @@ a img {
 
 .test {
 	background-color: #ebebeb;
-	padding: 65px 0;
 }
 
 .section__test-subtitle {
@@ -817,10 +825,43 @@ label {
 
 /* ========== Responsive ========== */
 
+@media screen and (max-width: 1200px) {
+	.main {
+		background-size: 35rem;
+	}
+
+	.comfort__img img {
+		margin: 12px 0 0 0;
+	}
+
+	.main__offer-btn {
+		margin-top: 25px;
+	}
+
+}
+
+
 @media screen and (max-width: 991px) {
 
 	.header__wrapper {
 		justify-content: space-between;
+	}
+
+	.nav__button {
+		background-color: #fff;
+		color: #424652;
+		border: 1px solid #EB6302;
+		transition: ease .3s;
+	}
+
+	.nav__button:hover {
+		background-color: #EB6302;
+		color: #fff;
+		border: 1px solid #EB6302;
+	}
+
+	.hamburger-btn {
+		display: flex;
 	}
 
 	.nav__menu {
@@ -934,12 +975,6 @@ label {
 		text-align: center;
 	}
 
-	.sales__product-image img {
-		width: auto;
-		max-height: 190px;
-		min-width: auto
-	}
-
 	.sales__price {
 		display: flex;
 		justify-content: center;
@@ -1013,10 +1048,16 @@ label {
 
 @media screen and (max-width: 320px) {
 	.main {
-    background-position: center center;
+		padding: 25px 0 50px 0;
+    background-position: center 5rem;
 	}
 
 	.main__offer-title {
     font-size: 20px;
     line-height: 32px;
+	}
+
+	.main__offer-btn {
+		margin-top: 14rem;
+	}
 }
