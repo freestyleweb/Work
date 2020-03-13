@@ -14,6 +14,12 @@
 
 <body>
 
+
+
+	<div class="mobile-menu">
+
+	</div>
+
 	<header class="header">
 		<div class="header-inner">
 			<div class="container header-container">
@@ -38,7 +44,21 @@
 						<a href="tel:+48221234567" class="phone">+48 221 234 567</a>
 						<a href="#" class="call-back">Zamów rozmowę</a>
 					</div>
+					<div class="burger">
+						<button class="burger__button">
+							<span class="burger__button-line"></span>
+							<span class="burger__button-line"></span>
+							<span class="burger__button-line"></span>
+						</button>
+						<button class="burger__button-close">
+							<span class="burger__button-line"></span>
+							<span class="burger__button-line"></span>
+						</button>
+					</div>
 				</nav>
+
+
+
 				<div class="header__title">
 					<h1 class="main__title">UKŁADANIE PŁYTEK</h1>
 					<span class="main__description">każdego rodzaju w Warszawie</span>
@@ -46,11 +66,31 @@
 				<div class="form">
 					<form action="">
 						<label class="form__title">Bezpłatna konsultacja</label>
-						<input type="text" placeholder="Twoje imię*" required>
-						<input type="tel" placeholder="Twój telefon*" required>
-						<button type="submit" class="send-button">konsultacja</button>
+						<input id="inputName" type="text" placeholder="Twoje imię*" required>
+						<input id="inputPhone" type="tel" placeholder="Twój telefon*" required>
+						<button type="submit" class="send-button" id="header__send-button">konsultacja</button>
 					</form>
 				</div>
+			</div>
+		</div>
+
+
+
+	</header>
+
+	<!-- <header class="header-after-send">
+		<div class="container header-container">
+			<div class="header-inner header-inner--after-send">
+				<div class="logo-after-send">
+					<img src="img/logo_260x260.png" alt="">
+				</div>
+				<div class="header__title header__title_after-send">
+					DZIĘKUJEMY ZA SKONTAKTOWANIE SIĘ!
+				</div>
+				<span class="main__description main__description_after-send">otrzymaliśmy twoją aplikację w najbliższym czasie
+					nasz kierownik skontaktuje
+					się z tobą
+				</span>
 			</div>
 		</div>
 	</header>
@@ -360,9 +400,25 @@
 		</div>
 	</section>
 
+	<footer class="dark-section">
+		<div class="dark-section-inner">
+			<div class="container">
+				<div class="form">
+					<form action="">
+						<label class="form__title">Bezpłatna konsultacja</label>
+						<input type="text" placeholder="Twoje imię*" required>
+						<input type="tel" placeholder="Twój telefon*" required>
+						<button type="submit" class="send-button">konsultacja</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
+	<script src="js/slider.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
