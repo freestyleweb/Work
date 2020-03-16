@@ -23,13 +23,11 @@ headerSendButton.onclick = function (e) {
 document.querySelector('.burger__button').addEventListener('click', function () {
 	mobileMenu.classList.toggle('active');
 	burgerButton.classList.toggle('hide');
-	burgerButtonClose.classList.toggle('active');
-
+	burgerButtonClose.classList.toggle('hide');
 });
 
-// document.burgerButton.onclick = function () {
-// 	document.querySelector('.mobileMenu').toggleClass('active');
-// };
-
-
-
+document.querySelector('.burger__button-close').addEventListener('click', function () {
+	mobileMenu.classList.toggle('active');
+	burgerButton.classList.toggle('hide');
+	burgerButtonClose.classList.toggle('hide');
+});
