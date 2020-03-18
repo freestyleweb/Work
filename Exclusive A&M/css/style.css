@@ -13,6 +13,13 @@ body {
 	position: relative;
 }
 
+.fixed {
+	position: fixed;
+	background-color: rgba(0,0,0,.8);
+	width: 100%;
+	height: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
@@ -21,6 +28,21 @@ h1, h2, h3, h4, h5, h6 {
 input,
 button {
 	outline: none;
+}
+
+.popup {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 1);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+	margin: 0 15px;
+	height: 55vh;
 }
 
 .dark-section {
@@ -76,8 +98,6 @@ button {
 	justify-content: space-around;
 	height: 100%;
 }
-
-
 
 
 /* Header */
@@ -144,7 +164,8 @@ button {
 	font-size: 35px;
 	line-height: 43px;	
 }
-.call-back {
+.d-call-back,
+.m-call-back {
 	max-width: 145px;
 	color: #C5A47E;
 	line-height: 20px;
@@ -204,6 +225,7 @@ button {
 	background: rgba(197, 164, 126, 0.1);
 	display: flex;
 }
+
 form {
 	display: block;
 	margin: 0 auto;
@@ -211,6 +233,7 @@ form {
 	max-width: 860px;
 	width: 100%;
 }
+
 .form__title {
 	display: block;
 	text-align: left;
@@ -275,12 +298,11 @@ form {
 	display: block;
 }
 
-.burger {
-	display: block;
-}
+
 
 .burger__button,
-.burger__button-close {
+.burger__button-close,
+.close-popup__button {
 	background-color: transparent;
 	border: none;
 	height: 26px;
@@ -294,27 +316,45 @@ form {
 	top: 50px;
 }
 
+.burger__button {
+	display: none;
+}
 
-.burger__button-close  {
+
+.burger__button-close,
+.close-popup__button  {
 	display: flex;
 	bottom: 0;
 	justify-content: center;
 	align-items: center;
 }
 
-.burger__button-close span  {
+.close-popup__button {
+	right: 15px;
+	top: 15px;
+}
+
+.burger__button-close span,
+.close-popup__button span  {
 	transform: rotate(45deg);
 }
 
-.burger__button-close span:last-child  {
+.burger__button-close span:last-child,
+.close-popup__button span:last-child  {
 	transform: rotate(-45deg);
 }
 
-.burger__button-line {
+.burger__button-line,
+.close-popup__button-line {
 	width: 36px;
 	height: 1px;
 	background-color: #fff;
 	position: relative;
+}
+
+.close-popup__button-line {
+	width: 20px;
+	height: 1px;
 }
 
 .mobile-menu-navigation .nav-links {

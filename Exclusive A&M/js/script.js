@@ -6,6 +6,8 @@ const inputPhone = document.querySelector('#inputPhone');
 const mobileMenu = document.querySelector('.mobile-menu');
 const burgerButton = document.querySelector('.burger__button');
 const burgerButtonClose = document.querySelector('.burger__button-close');
+const callBack = document.querySelectorAll('.call-back');
+const popup = document.querySelector('.popup');
 
 
 headerSendButton.onclick = function (e) {
@@ -30,4 +32,19 @@ document.querySelector('.burger__button-close').addEventListener('click', functi
 	mobileMenu.classList.toggle('active');
 	burgerButton.classList.toggle('hide');
 	burgerButtonClose.classList.toggle('hide');
+});
+
+document.querySelector('.d-call-back').addEventListener('click', function () {
+	popup.classList.remove('hide');
+	document.querySelector('body').classList.add('fixed');
+});
+
+document.querySelector('.m-call-back').addEventListener('click', function () {
+	popup.classList.remove('hide');
+	document.querySelector('body').classList.add('fixed');
+});
+
+document.querySelector('.close-popup__button').addEventListener('click', function () {
+	popup.classList.add('hide');
+	document.querySelector('body').classList.remove('fixed');
 });
