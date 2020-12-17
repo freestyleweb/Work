@@ -3,7 +3,47 @@
 }
 
 @media (max-width: 993px) { 
+	.category__item-btn {
+		max-width: 75%;
+		min-width: 50%;
+	}
+
+	.dino {
+		grid-column: 1 / 5;
+	}
+
+	.champion {
+		grid-column: 5 / 10;
+	}
+
+	.galaxy {
+		grid-row: span 2;
+		grid-row: 3 / 4;
+		grid-column: 7 / 10;
+	}
+
+	.hrust {
+		grid-column: 1 / 4;
+	}
 	
+	.energy {
+		grid-row: 3 / 4;
+		grid-column: 4 / 7;
+	}
+
+	.about__text-description {
+		font-size: 18px;
+	}
+
+	.about__text--ingredients,
+	.about__text--minerals,
+	.about__text--children,
+	.about__text--recipe {
+		background-repeat: no-repeat;
+		background-position: -500% -500%;
+		padding: 30px 55px;
+		color: #fff;
+	}
 }
 
 @media (max-width: 769px) { 
