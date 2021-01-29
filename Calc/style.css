@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+}
+
+.container {
+    max-width: 420px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 640px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px 30px;
+}
+
+/* .display span {
+    display: inline-block;
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 100%;
+    height: 100%;
+} */
+
+.display span {
+    text-align: right;
+    margin: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calc-btn,
+.btn-total {
+    width: 75px;
+    height: 58px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0.25px solid #eee;
+    font-size: 26px;
+    margin: 0;
+    transition: background-color .2s ease;
+}
+
+.calc-btn:hover,
+.calc-btn:active,
+.calc-btn:focus {
+    background-color: #eee;
+}
+
+.btn-operation {
+    font-size: 16px;
+    color: #FF6B00;
+}
+
+.btn-operation:hover,
+.btn-operation:active,
+.btn-operation:focus {
+    background-color: #fff0e7;
+}
+
+.btn-total {
+    background-color: #FF6B00;
+    border: .5px solid #FF6B00;
+    color: #ffffff;
+}
+
+.btn-total:hover,
+.btn-total:active,
+.btn-total:focus {
+    background-color: #FF6B00;
+}
+
+.mini-calc {
+    display: flex;
+}
+
+.mini-calc input {
+    max-width: 50px;
+    margin: 0 20px;
+}
